@@ -72,43 +72,33 @@ export default function Home(setCmvErrorsx={setCmvErrorsx}) {
   
     
   )
-
+  
+ useEffect(()=>{
+  
   const saveActiveCryptoList = ()=>{
     if(typeof window !== 'undefined'){
      const savedCrptoList = localStorage.setItem("allActiveCrypto", JSON.stringify(activeCoins));
      const savedCryptoList = localStorage.getItem("allActiveCrypto");
      const convertSavedCryptoList = JSON.parse(savedCryptoList);
-    
     }
-  
     }
-   
- useEffect(()=>{
   saveActiveCryptoList()
  },[activeCoins])
  
   const [buy, setBuy]= useState( function getStaticProps(){
-
     if(typeof window !== 'undefined'){
       const coinlist = JSON.parse(window.localStorage.getItem('cList'))
       return coinlist
     }
-  }
-      
-      ) 
+  }    
+ ) 
 
-
- 
-
- const saveBuyList = ()=>{
-  if(typeof window !== 'undefined'){
-   const saveBuy = localStorage.setItem("cList", JSON.stringify(buy));
-
-  }
-
-  }
- 
 useEffect(()=>{
+const saveBuyList = ()=>{
+if(typeof window !== 'undefined'){
+const saveBuy = localStorage.setItem("cList", JSON.stringify(buy));
+}
+}
 saveBuyList()
 },[buy])
 
@@ -137,16 +127,12 @@ const updateCurrenccy = useEffect(()=>{
   setCurrency(currency)
  }},[currency])
 
- 
-const welcome = (setCmvErrorsx)=>{
+useEffect(()=>{
+  const welcome = (setCmvErrorsx)=>{
   const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.toLocaleLowerCase()}&ids=${buy.toString()}
   &order=market_cap_desc&per_page=1&page=1&sparkline=false`
   axios.get(url).then((res)=>{setCoinArr(res.data)}).then(()=>{}).catch((err)=> {console.log(err);()=>setCmvErrorsx('No internet connection')})
-  
 }
-
-
-useEffect(()=>{
   welcome ()
   },[]);
 
@@ -160,32 +146,24 @@ let currencryMap = {
 
 }
 
-const detectStop = ()=>{
-if(!runOrStop){
+
+useEffect(()=>{
+  const detectStop = ()=>{
+  if(!runOrStop){
   console.log('I have stoped');
   setFinalComp([]);
   setCoinArr([])
 }
-else{
-  console.log('I am Runing....');
-}
 }
 
-useEffect(()=>{
   detectStop() 
 },[runOrStop])
-
-const detectQuickData = ()=>{
-  if(!quickData){
-    console.log('Quick Data have stoped');
-
-  }
-  else{
-    console.log('Quick Data is Runing....');
-  }
-  }
-  
+ 
   useEffect(()=>{
+  const detectQuickData = ()=>{
+  if(!quickData){
+  }
+  }
     detectQuickData() 
   },[quickData])
 

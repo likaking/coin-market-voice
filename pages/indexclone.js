@@ -140,27 +140,15 @@ export default function Home() {
  }
 
 
-const data1 = ()=>{
-//setCoinArr([])
-  //buy.push('polkadot')
-  const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&ids=${buy.toString()}
-  &order=market_cap_desc&per_page=100&page=1&sparkline=false`
 
-  
-
-  axios.get(url).then((res)=>{coinArrB.push(...res.data) }).then(()=>{compose()}).catch((err)=> console.log(err))
-
-
-  //console.log(url)
-  
-  //catch(err=> console.log(err))
-  //setAA(['polkadot'])
- //console.log(aa)
-
-}
 
 
   const voiceCoin = useEffect(()=>{
+  const data1 = ()=>{
+  const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency}&ids=${buy.toString()}
+  &order=market_cap_desc&per_page=100&page=1&sparkline=false`
+  axios.get(url).then((res)=>{coinArrB.push(...res.data) }).then(()=>{compose()}).catch((err)=> console.log(err))
+}
   data1()
   },[currency]);
 
@@ -183,8 +171,6 @@ let currencryMap = {
 
 
 
-//Object.entries(coinArr).map((c)=>{ return console.log(c)})
-//console.log(Object.values(coinArr))
 
 const compose = ()=>{
   console.log(coinArrB.length)

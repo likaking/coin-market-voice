@@ -223,7 +223,7 @@ display: none;
 .banner{
 padding-left: 0.5rem;
 padding-right: 0rem;
-height: 25em;
+height: 22em;
 background-position: 10%;
 }
 .cmv_top{ 
@@ -242,7 +242,7 @@ height: 2.2vh;
     background-image: -webkit-linear-gradient(rgb(23, 143, 143),rgb(29, 105, 124));
     border-top-right-radius: 10em;
     border-radius: 0em 0em 0em 8em;
-    
+	background-image: url('/bggg.png');
     }
 .banner_div_L_P{
 font-size: 1.5vw;

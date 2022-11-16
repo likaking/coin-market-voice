@@ -90,7 +90,7 @@ useEffect(()=>{
 
     if(timeInterval.current.value !== '' && timeInterval.current.value > 0 && buy.length > 0 && quickData){
     const cryptoUrlQuick = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.toLocaleLowerCase()}&ids=${buy.toString()}
-    &order=market_cap_desc&per_page=1&page=1&sparkline=false`
+    &order=market_cap_desc&per_page=250&page=1&sparkline=false`
     axios.get(cryptoUrlQuick).then((res)=>{setCoinArr(res.data)}).then(()=>{}).catch((err)=>{showCmvErrorsx('Unsuported currency')})
    
   }
@@ -107,15 +107,17 @@ var realTimeUpdate = updateInterval * 60000
 
 const recompArr = []
 
+  const cryptoUrl = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.toLocaleLowerCase()}&ids=${buy.toString()}
+    &order=market_cap_desc&per_page=250&page=1&sparkline=false`
+	
 useEffect(()=>{
   hideCmvErrorsx()
 const getLatestCoinInfo = setInterval(()=>{
     if(runOrStop && timeInterval.current.value !== '' && timeInterval.current.value > 0 && buy.length > 0 ){
     var date = new Date()
     var teeest = date.getMinutes()
-    const cryptoUrl = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.toLocaleLowerCase()}&ids=${buy.toString()}
-    &order=market_cap_desc&per_page=1&page=1&sparkline=false`
-    axios.get(cryptoUrl).then((res)=>{setCoinArr(res.data)}).then().catch((err)=>{console.log(err); showCmvErrorsx('No internet connection')})
+  
+    axios.get(cryptoUrl).then((res)=>{setCoinArr(res.data)}).then().catch((err)=>{ showCmvErrorsx('No internet connection')})
     
  
   }
