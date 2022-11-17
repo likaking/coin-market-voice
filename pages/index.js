@@ -99,16 +99,15 @@ const updateCurrenccy = useEffect(()=>{
   setCurrency(currency)
  }},[currency])
 
- 
-const welcome = (setCmvErrorsx)=>{
-  const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.toLocaleLowerCase()}&ids=${buy.toString()}
-  &order=market_cap_desc&per_page=1&page=1&sparkline=false`
-  axios.get(url).then((res)=>{setCoinArr(res.data)}).then(()=>{}).catch((err)=> {console.log(err);()=>setCmvErrorsx('No internet connection')})
-  
-}
 
+ const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.toLocaleLowerCase()}&ids=${buy.toString()}
+  &order=market_cap_desc&per_page=250&page=1&sparkline=false`
 
 useEffect(()=>{
+  const welcome = (setCmvErrorsx)=>{
+  axios.get(url).then((res)=>{console.log(res.data);setCoinArr(res.data)}).then(()=>{}).catch((err)=> {console.log(err);()=>setCmvErrorsx('No internet connection')})
+  
+}
   welcome ()
   },[]);
 
@@ -122,24 +121,22 @@ let currencryMap = {
 
 }
 
-const detectStop = ()=>{
+
+
+useEffect(()=>{
+  const detectStop = ()=>{
 if(!runOrStop){
   setFinalComp([]);
   setCoinArr([])
 }
-else{
 }
-}
-
-useEffect(()=>{
   detectStop() 
 },[runOrStop])
 
+
+/*
 const detectQuickData = ()=>{
   if(!quickData){
-
-  }
-  else{
   }
   }
   
@@ -147,7 +144,7 @@ const detectQuickData = ()=>{
     detectQuickData() 
   },[quickData])
 
-
+*/
 
 
 const precompArr = []
@@ -187,7 +184,7 @@ detectSpeech()
   <div className={styles.banner_div_L}>
     <h1 className={styles.banner_div_L_hdr}>Monitor Crypto Prices</h1>
     <h1 className={styles.banner_div_L_hdr2}>Via Audio</h1>
-    <h4 className={styles.banner_div_L_subhdr}>Latest crypto prices{<br className={styles.responsive_txt_brk} />} in our ears </h4>
+    <h4 className={styles.banner_div_L_subhdr}>Latest crypto prices{<br className={styles.responsive_txt_brk} />} in your ears </h4>
     <p className={styles.banner_div_L_P}>Keeping Up With the {<br className={styles.responsive920_txt_brk}/>} latest Crypto Prices Should {<br />} Not  Disrupt Our Lives</p>
     </div>
   <div className={styles.banner_div_R}></div>

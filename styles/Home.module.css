@@ -33,7 +33,7 @@ flex: 0.31;
 flex: 0.29; 
 position: relative;
 background-image: -webkit-linear-gradient(rgb(23, 143, 143),rgb(29, 105, 124));
-background-image: url('/bggg.png');
+background-image: url('/cryptobg.png');
 border-radius: 0em 11em 0em 11em;
 background-size: cover;
 overflow: hidden;
@@ -321,9 +321,10 @@ font-size: 1rem;
 flex-direction: column;
 padding-left: 0rem;
 padding-right: 0rem;
-height: 60vh;
+height: 70vh;
 background-position: 70%;
 background-size: cover;
+border-radius: 0em 0em 4em 4em;
 }
 .cmv_top{ 
 height: 3rem;
@@ -346,11 +347,10 @@ align-items: center;
     
     }
     .banner_div_REnd{
-    flex: 0.4; 
+    flex: 0.2; 
     position: relative;
     background-image: -webkit-linear-gradient(rgb(23, 143, 143),rgb(29, 105, 124));
-    background-image: url('/mobilebg.png');
-    border-radius: 0em 0em 0em 0em;
+    border-radius: 0em 0em 4em 4em;
     overflow: hidden;
     
     }
@@ -417,15 +417,15 @@ display: block;
 
 
 @media screen and (max-width: 430px) {
-    .cmvBody{
-        padding-top: 1rem;
-        height: 190vh;
-        }
+.cmvBody{
+padding-top: 1rem;
+height: 190vh;
+}
 .banner{
 flex-direction: column;
 padding-left: 0rem;
 padding-right: 0rem;
-height: 30em;
+height: 23em;
 background-position: 70%;
 background-size: cover;
 }
@@ -454,7 +454,6 @@ align-items: center;
     flex: 0.29; 
     position: relative;
     background-image: -webkit-linear-gradient(rgb(23, 143, 143),rgb(29, 105, 124));
-    background-image: url('/mobilebg.png');
     border-top-right-radius: 10em;
     border-radius: 0em 0em 0em 0em;
   
