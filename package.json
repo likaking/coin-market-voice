@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Monitor crypto prices via audio",
   "main": "next.config.js",
-  
   "dependencies": {
     "firebase": "^9.6.10",
     "acorn": "^8.7.1",
@@ -300,7 +299,7 @@
     "lint": "next lint",
     "export": "next build && next export"
   },
-    "repository": {
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/likaking/coin-market-voice.git"
   },
@@ -317,5 +316,6 @@
   "bugs": {
     "url": "https://github.com/likaking/coin-market-voice/issues"
   },
-  "homepage": "https://github.com/likaking/coin-market-voice#readme"
+  "homepage": "https://github.com/likaking/coin-market-voice#readme",
+  "devDependencies": {}
 }
