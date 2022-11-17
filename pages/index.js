@@ -99,16 +99,16 @@ const updateCurrenccy = useEffect(()=>{
   setCurrency(currency)
  }},[currency])
 
- const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.toLocaleLowerCase()}&ids=${buy.toString()}
-  &order=market_cap_desc&per_page=250&page=1&sparkline=false`
-
+ 
+const welcome = (setCmvErrorsx)=>{
+  const url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.toLocaleLowerCase()}&ids=${buy.toString()}
+  &order=market_cap_desc&per_page=1&page=1&sparkline=false`
+  axios.get(url).then((res)=>{setCoinArr(res.data)}).then(()=>{}).catch((err)=> {console.log(err);()=>setCmvErrorsx('No internet connection')})
+  
+}
 
 
 useEffect(()=>{
-  const welcome = (setCmvErrorsx)=>{
-  axios.get(url).then((res)=>{console.log(res.data);setCoinArr(res.data)}).then(()=>{}).catch((err)=> {console.log(err);()=>setCmvErrorsx('No internet connection')})
-  
-}
   welcome ()
   },[]);
 
@@ -122,22 +122,24 @@ let currencryMap = {
 
 }
 
-
-
-useEffect(()=>{
-  const detectStop = ()=>{
+const detectStop = ()=>{
 if(!runOrStop){
   setFinalComp([]);
   setCoinArr([])
 }
+else{
 }
+}
+
+useEffect(()=>{
   detectStop() 
 },[runOrStop])
 
-
-/*
 const detectQuickData = ()=>{
   if(!quickData){
+
+  }
+  else{
   }
   }
   
@@ -145,7 +147,7 @@ const detectQuickData = ()=>{
     detectQuickData() 
   },[quickData])
 
-*/
+
 
 
 const precompArr = []
