@@ -107,10 +107,11 @@ var realTimeUpdate = updateInterval * 60000
 
 const recompArr = []
 
-  const cryptoUrl = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.toLocaleLowerCase()}&ids=${buy.toString()}
-    &order=market_cap_desc&per_page=250&page=1&sparkline=false`
+
 	
 useEffect(()=>{
+	  const cryptoUrl = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.toLocaleLowerCase()}&ids=${buy.toString()}
+    &order=market_cap_desc&per_page=250&page=1&sparkline=false`
   hideCmvErrorsx()
 const getLatestCoinInfo = setInterval(()=>{
     if(runOrStop && timeInterval.current.value !== '' && timeInterval.current.value > 0 && buy.length > 0 ){

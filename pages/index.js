@@ -109,7 +109,7 @@ useEffect(()=>{
   
 }
   welcome ()
-  },[]);
+  },[url]);
 
 
 
