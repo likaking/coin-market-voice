@@ -285,8 +285,6 @@ if(typeof window !== 'undefined'){
     
 return(
 <>
-
-{/*<div>{updateInterval} | {realTimeUpdate} | {counta} | {replay} </div>*/}
 <div className={styles.CMVControls}>
 <div className={styles.CMVControls_main}>
 <p className={styles.cmv_device_play_error} ref={cmvErrorsxHolder}>{cmvErrorsx}</p>
@@ -309,7 +307,7 @@ controlIcons.map((icon,index)=>{
 </div>
 <div className={styles.CMVControls_main1_inputControl}>
 <div className={styles.CMVControls_main1_updateTxt}>
-<div>Update</div>
+<div>Voice</div>
 <div>Every</div>
 </div>
 <div className={styles.CMVControls_main1_input_time}>
