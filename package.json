@@ -13,11 +13,15 @@
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
     "@mui/material": "^5.9.0",
+    "axios": "^1.1.3",
     "next": "12.1.6",
+    "number-to-words": "^1.2.4",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-icons": "^4.4.0",
-    "sharp": "^0.30.7"
+    "sharp": "^0.30.7",
+    "speak-tts": "^2.0.8",
+    "to-words": "^3.3.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.12",
