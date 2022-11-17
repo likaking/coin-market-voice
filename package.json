@@ -4,6 +4,10 @@
   "description": "Monitor crypto prices via audio",
   "main": "next.config.js",
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.10.14",
+    "@mui/material": "^5.10.14",
     "acorn": "^8.7.1",
     "acorn-jsx": "^5.3.2",
     "acorn-node": "^1.8.2",
