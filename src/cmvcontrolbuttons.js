@@ -275,7 +275,7 @@ if(typeof window !== 'undefined'){
       speech.cancel();
       setIsPlaying(false)
       //setRunOrStop(false);
-      //setQuickData(true);
+      setQuickData(true);
     }
   
     const startSpeaking = ()=>{
