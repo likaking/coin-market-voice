@@ -105,7 +105,7 @@ const updateCurrenccy = useEffect(()=>{
 
 useEffect(()=>{
   const welcome = (setCmvErrorsx)=>{
-  axios.get(url).then((res)=>{console.log(res.data);setCoinArr(res.data)}).then(()=>{}).catch((err)=> {console.log(err);()=>setCmvErrorsx('No internet connection')})
+  axios.get(url).then((res)=>{setCoinArr(res.data)}).then(()=>{}).catch((err)=> {console.log(err);()=>setCmvErrorsx('No internet connection')})
   
 }
   welcome ()
@@ -189,9 +189,7 @@ detectSpeech()
     </div>
   <div className={styles.banner_div_R}></div>
   <div className={styles.banner_div_REnd}>
-  <div className={styles.banner_div_REnd_rotoDiv}>
-  <div className={styles.banner_div_REnd_rotoDiv_item}></div>
-  </div>
+  <img src = '/crypPricesVec.png' alt='cryptoPricesVector' className={styles.banner_div_REnd_img} />
   </div>
   </div>
 
