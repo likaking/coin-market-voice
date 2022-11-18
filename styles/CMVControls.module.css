@@ -53,13 +53,13 @@ display: flex;
 font-size: 1vw;
 font-weight: 500;
 flex-direction: column;
-color: rgb(53, 91, 102);
+color: rgb(74, 125, 139);
 }
 .CMVControls_main1_input_box{
 width: 7vw;
 height: 7vh;
 font-size: 3.5vw;
-color: rgb(53, 91, 102);
+color: rgb(74, 125, 139);
 border: 0;
 background-color: transparent;
 }
@@ -70,7 +70,7 @@ right: 3%;
 padding: 0rem 0.3rem 0rem 0.3rem;
 border-radius: 10vw;
 border: 0px solid rgb(34, 33, 33);
-color: rgb(53, 91, 102);
+color: rgb(74, 125, 139);
 background-color: rgba(251, 253, 253, 0.836);
 box-shadow: 0 1px 2px 0 rgba(180, 180, 180, 0.2), 0 2px 2px 0 rgba(177, 177, 177, 0.19);
 
@@ -108,7 +108,7 @@ color:rgb(153, 178, 185);
  transition: .8s;
 }
 #secondCbtnColor{
-color:rgb(86, 137, 153);
+color:rgb(95, 154, 172);
 transition: .5s; 
 }
 
