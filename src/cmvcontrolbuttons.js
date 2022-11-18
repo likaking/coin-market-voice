@@ -138,36 +138,27 @@ const getLatestCoinInfo = setInterval(()=>{
     currency:currency.toUpperCase()
   }
 
- 
-
   const composeMsg = ()=>{
     var date = new Date()
     //var teeest =  date.getHours()  + ' : ' + date.getMinutes()
     let allNews  =  coinArr.map((news)=>{ 
       let priceFlow = Math.floor(news.current_price) > 1 ?  currencyPlural : currencySingular;
       let fixPricePrecision = news.current_price >= 1 ? news.current_price.toLocaleString() : news.current_price;
-
       var composeInfo = news.name + ' is trading @ ' + fixPricePrecision  + ' ' + priceFlow +', with a price change of '+ news.price_change_percentage_24h.toFixed(1) + '%'
       var recomp = composeInfo.replace(/\./g,' point ')
       recompArr.push(recomp +' ' + ' ' + ' ' + ' '+ ' ')
-
-      console.log(recomp)
     })
     setFinalComp(recompArr.toString()); 
     isPlaying && vCoin() 
     }
-
     useEffect(()=>{
         composeMsg()
         },[coinArr,replay])
-
   const clearTime = ()=>{
-
   }
 
 if(typeof window !== 'undefined'){
     var speech = new Speech() // will throw an exception if not browser supported
-   
     if(speech.hasBrowserSupport()) { // returns a boolean
         //console.log("speech synthesis supported")
     }
