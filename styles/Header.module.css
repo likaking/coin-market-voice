@@ -232,8 +232,6 @@
         height: 100%;
         margin-left: auto;
         padding-right: 3rem;
-        
-        
         }
         .nav_bar__login_btn{
         font-size: 3.5vw ;
@@ -292,7 +290,8 @@
           top: 130%;
           background-color:  rgb(248, 242, 248);
           overflow: hidden;
-          background-image: -webkit-linear-gradient(rgb(255, 255, 255),rgb(219, 219, 219));
+          background-color: rgb(56, 124, 151);
+          background-image: -webkit-linear-gradient(rgb(68, 139, 167),rgba(57, 175, 169, 0.801));
           position: absolute;
           z-index: 2;
           border-radius: 2vw 0vw 0vw 2vw;
@@ -428,7 +427,8 @@
           padding: 1em;
           background-color:  rgb(56, 124, 151);
           overflow: hidden;
-          background-image: -webkit-linear-gradient(rgb(56, 124, 151),rgba(40, 156, 150, 0.651));
+          background-color: rgb(56, 124, 151);
+          background-image: -webkit-linear-gradient(rgb(68, 139, 167),rgba(57, 175, 169, 0.801));
           position: absolute;
           z-index: 2;
           border-radius: 2vw 0vw 0vw 2vw;
