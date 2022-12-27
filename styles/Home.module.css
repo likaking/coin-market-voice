@@ -230,7 +230,7 @@ display: none;
 .banner{
 padding-left: 0.5rem;
 padding-right: 0rem;
-height: 49vw;
+height: 45vw;
 }
 .cmv_top{ 
 height: 2.1rem;
@@ -263,6 +263,7 @@ display: none;
 }
 .banner_div_L_hdr{
 line-height: 80%;
+font-size: 3vw;
 margin-top: 10%;
 }
 .banner_div_L_hdr2{
