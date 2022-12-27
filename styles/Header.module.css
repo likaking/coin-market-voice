@@ -142,13 +142,13 @@
         justify-content: space-around;
         flex-direction: row;
         text-decoration: none;
-        gap: 15px;	
         font-size: 2vw;
         }
         .nav_bar__menu_a {
         color: rgb(197, 196, 197);
         text-align: center;
         text-decoration: none;
+		padding:1vw;
         }
         .nav_bar__menu_a:hover {
         color: rgb(250, 245, 250);
