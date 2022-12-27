@@ -93,7 +93,7 @@
     
     @media screen and (max-width: 920px) {
       .nav_bar{
-        height: 5.2vh;
+        height: 4em;
         }
       .nav_bar__logo{
         width: 7%;
@@ -161,7 +161,7 @@
     
     @media screen and (max-width: 830px) {
       .nav_bar{
-        height: 5.2vh;
+        height: 4em;
         }
       .nav_bar__logo{
         width: 7%;

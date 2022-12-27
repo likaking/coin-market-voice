@@ -267,36 +267,36 @@ transition: 0.4s;
     }
     
     .footer_links_contianer{
-        flex: 1;
+    flex: 1;
     }
     .footer_links_contianer >ul{
-        color: rgb(216, 216, 216); 
-        list-style: none;
-        display: flex;
-		justify-content: space-between;
-        font-size: 1.3em;
-        margin: 0;
-        padding: 0;
-        margin-top: 0.65vw;
-        cursor: pointer;
+    color: rgb(216, 216, 216); 
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3em;
+    margin: 0;
+    padding: 0;
+    margin-top: 0.65vw;
+    cursor: pointer;
     }
+	.footer_links_contianer >ul>li{
+	
+	}
     .footer_Social{
-        color: rgb(216, 216, 216); 
-        font-size: 1.2em;
-        align-items: right;
-        gap: 1.5vw;
-        cursor: pointer;
-        flex: 1;
+    color: rgb(216, 216, 216); 
+    font-size: 1.2em;
+    align-items: right;
+    cursor: pointer;
+    flex: 1;
     }
     .footer_Social >ul{
-       list-style: none;
-       display: flex; 
-	   justify-content: space-between;
-       margin: 0;
-       padding: 0;
-       gap: 1.5vw;
-       margin-left: 6.2vw;
-       
+    list-style: none;
+    display: flex; 
+	justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    margin-left: 6.2vw;   
     }
     .footer_ul{
        margin-left: auto; 
@@ -304,6 +304,7 @@ transition: 0.4s;
     .footer_Social >ul>li{
        font-size: 2em;
        transition: 0.4s;
+	   padding:1.5vw
          
      }
      .footer_Social >ul>li :hover{
