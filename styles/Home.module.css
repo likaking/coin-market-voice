@@ -233,10 +233,10 @@ display: none;
 padding-left: 0.5rem;
 padding-right: 0rem;
 height: 45vw;
-background-position: 1%;
+background-position: 30%;
 }
 .cmv_top{ 
-height: 2.2vh;
+height: 3vh;
 }
 .banner_div_L{
  flex: 0.4;
