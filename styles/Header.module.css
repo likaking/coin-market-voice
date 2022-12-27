@@ -17,8 +17,8 @@
     box-shadow: 0 1px 2px 0 rgba(102, 102, 102, 0.2), 0 2px 2px 0 rgba(105, 105, 105, 0.19);
     }
     .nav_bar__logo{
-    width: auto;
-    height:60%;
+    width: 3.5%;
+    height:auto;
     position: relative;
     }
     .nav_bar__logo_icon{
@@ -96,8 +96,8 @@
         height: 5.2vh;
         }
       .nav_bar__logo{
-        width: auto;
-        height:70%;
+        width: 7%;
+        height:auto;
         position: relative;
         }
         .nav_bar__compName{
@@ -164,8 +164,8 @@
         height: 5.2vh;
         }
       .nav_bar__logo{
-        width: auto;
-        height:70%;
+        width: 7%;
+        height:auto;
         position: relative;
         }
         .nav_bar__logo_icon{
@@ -201,12 +201,10 @@
         justify-content: flex-start;
         padding-right: 1vw;
         padding-left: 1.5vw;
-        
-      
         }
         .nav_bar__logo{
-        width: auto;
-        height:60%;
+        width: 10%;
+        height:auto;
         position: relative;
         }
         .nav_bar__logo_icon{
@@ -347,8 +345,8 @@
         justify-content: flex-start;
         }
         .nav_bar__logo{
-        width: auto;
-        height:60%;
+        width: 11%;
+        height:auto;
         position: relative;
         }
         .nav_bar__logo_icon{

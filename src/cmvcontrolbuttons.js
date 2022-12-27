@@ -168,10 +168,10 @@ if(typeof window !== 'undefined'){
       lang: currentLang,
       rate: 1,
       pitch: 1,
-     //'voice':currentVoice,
+      voice:currentVoice,
       'splitSentences': false,
       listeners: {
-        onvoiceschanged: (voices) => {
+      onvoiceschanged: (voices) => {
 
         }
       }
@@ -200,60 +200,55 @@ if(typeof window !== 'undefined'){
    setRunOrStop(true);
 
      speech.speak({
-          text: finalComp.toString(),
-          queue: true,
-          listeners: {
-            onstart: () => {
-              setCmvAction("Playing...");
+     text: finalComp.toString(),
+     queue: true,
+     listeners: {
+     onstart: () => {
+     setCmvAction("Playing...");
               
-            },
-            onend: () => {
-              setCmvAction("Thanks 4 Listening")
-            },
-            onresume: () => {
-             setCmvAction("Resumed")
-            },
-            onpause: () => {
-                setCmvAction("Paused...");
-               
+     },
+     onend: () => {
+     setCmvAction("Thanks 4 Listening")
+     },
+     onresume: () => {
+     setCmvAction("Resumed")
+     },
+     onpause: () => {
+     setCmvAction("Paused...");
+     },
           
-            },
-          
-            onboundary: (event) => {
-            /*
-              console.log(
-                event.name +
-                  " boundary reached after " +
-                  event.elapsedTime +
-                  " milliseconds."
-              );
-              */
-            }
-          }
-        })
-        .then((data) => {
-         
-        })
-        .catch((e) => {
-          setCmvErrorsx("An error occurred :", e)
-        });speech.resume();
-       
+     onboundary: (event) => {
+     /*
+     console.log(
+     event.name +
+     " boundary reached after " +
+     event.elapsedTime +
+     " milliseconds."
+     );
+     */
+     }
+     }
+     })
+     .then((data) => {   
+     })
+     .catch((e) => {
+     setCmvErrorsx("An error occurred :", e)
+     });speech.resume();
      }
 
 
 
 
 
-   const fixCurrency = (currency)=>{
+    const fixCurrency = (currency)=>{
     setCurrency(currency)
-   }
-   const updateCurrency = useEffect(()=>{
+    }
+    const updateCurrency = useEffect(()=>{
     
     },[currency])
 
     const newTime = (t)=>{
     setUpdateInterval(t.target.value);
-  
     }
 
     const updateNewTime = useEffect((t)=>{
@@ -293,7 +288,7 @@ return(
 controlIcons.map((icon,index)=>{
     const Iconf = icon;
 
-    return <Iconf key = {icon+index}   id = {colorContBtns === index ?  styles.secondCbtnColor : styles.firstCbtnColor} onClick={(c)=>{changeControlBtnColor(index);  colorContBtns === 0 && vCoin(); colorContBtns === 1 && pause(); colorContBtns === 2 && stop()}}   />
+    return <Iconf key = {icon+index}   id = {colorContBtns === index ?  styles.secondCbtnColor : styles.firstCbtnColor} onClick={(c)=>{changeControlBtnColor(index);  index === 0 && vCoin(); index === 1 && pause(); index === 2 && stop()}}   />
   
 
 })

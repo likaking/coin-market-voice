@@ -4,7 +4,8 @@
     width: 100%;
     padding-top: 5vw;
     margin-top: 0vw;
-    background-color: rgb(32, 70, 85);
+    background-color: rgb(56, 124, 151);
+    background-image: -webkit-linear-gradient(rgb(68, 139, 167),rgba(57, 175, 169, 0.801));
     position: relative;
 }
 .footer_logo{
@@ -272,8 +273,8 @@ transition: 0.4s;
         color: rgb(216, 216, 216); 
         list-style: none;
         display: flex;
+		justify-content: space-between;
         font-size: 1.3em;
-        gap: 1.5vw;
         margin: 0;
         padding: 0;
         margin-top: 0.65vw;
@@ -290,6 +291,7 @@ transition: 0.4s;
     .footer_Social >ul{
        list-style: none;
        display: flex; 
+	   justify-content: space-between;
        margin: 0;
        padding: 0;
        gap: 1.5vw;
