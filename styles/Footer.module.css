@@ -16,11 +16,13 @@
     margin: auto;
     gap: 2vw;
     padding-bottom: 5em;
+	
     
 }
 .footer_logo1{
     flex: 4.2;
     align-items: right;
+	
 }
 .footer_logo2{
     width: 30%;
@@ -28,6 +30,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 .footer_logo3{
     flex: 4.2;
@@ -42,6 +45,7 @@
     font-weight: 500;
     font-size: 1.2vw;
     color: rgb(229, 237, 245);
+	margin-top:2rem;
 }
 .footer_hr{
     width: 50%;
@@ -281,7 +285,7 @@ transition: 0.4s;
     cursor: pointer;
     }
 	.footer_links_contianer >ul>li{
-	
+	padding:1.5vw
 	}
     .footer_Social{
     color: rgb(216, 216, 216); 
@@ -429,7 +433,7 @@ transition: 0.4s;
         align-items: center;
         margin: auto;
         gap: 2rem;
-        padding-bottom: 0rem;
+        padding-bottom: 1rem;
         }
         
         .footer_links_contianer{
@@ -440,7 +444,6 @@ transition: 0.4s;
             list-style: none;
             display: flex;
             font-size: 3.2vw;
-            gap: 1.8vw;
             margin: 0;
             padding: 0;
             cursor: pointer;
@@ -451,7 +454,6 @@ transition: 0.4s;
             color: rgb(216, 216, 216); 
             font-size: 1em;
             align-items: right;
-            gap: 1.5vw;
             cursor: pointer;
             flex: 1;
         }
@@ -460,7 +462,6 @@ transition: 0.4s;
            display: flex; 
            margin: 0;
            padding: 0;
-           gap: 1.5vw;
            margin-left: 0;
            
         }
@@ -507,7 +508,7 @@ transition: 0.4s;
     @media screen and (max-width: 420px) {  
         .footer_logo2{
             width: 60%;
-            height: 17vh;
+            height: auto;
             display: flex;
             flex-direction: column;
          
@@ -527,12 +528,7 @@ transition: 0.4s;
         }
        
     }
-    @media screen and (max-width: 770px) {  
-       
-       
-    }
-
-
+    
 
 
     
