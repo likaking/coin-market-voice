@@ -146,8 +146,6 @@ transition-timing-function: ease-in-out;
 transition: .5s;
 }
     
-
-
 .cmv_device_grabBtn_errorContainer{
 width: 80%;
 position: absolute;
@@ -233,7 +231,7 @@ display: none;
 padding-left: 0.5rem;
 padding-right: 0rem;
 height: 45vw;
-background-position: 30%;
+background-position: -10%;
 }
 .cmv_top{ 
 height: 2.8rem;
@@ -264,24 +262,21 @@ box-shadow: 0 3px 15px 0 rgba(180, 180, 180, 0.2), 0 2px 10px 0 rgba(177, 177, 1
 display: none;
 }
 .banner_div_L_hdr{
-    line-height: 80%;
-    margin-top: 10%;
-
-    }
-    .banner_div_L_hdr2{
-    font-size: 8vw;
-    line-height: 100%;
-    padding: 0;
-    margin: 0;
-        
-    }
-    .banner_div_L_subhdr{
-    font-size: 2.2vw;
-    }
-    .banner_div_L_P{
-    font-size: 1.1em;
-
-    }
+line-height: 80%;
+margin-top: 10%;
+}
+.banner_div_L_hdr2{
+font-size: 8vw;
+line-height: 100%;
+padding: 0;
+margin: 0;        
+}
+.banner_div_L_subhdr{
+font-size: 2.2vw;
+}
+.banner_div_L_P{
+font-size: 1.1em;
+}
 .main_cmv_contianer{
 width: 100%;
 margin: auto;
@@ -315,8 +310,17 @@ font-size: 1rem;
 .cmv_device_grabBtn_errorContainer{
 }
 .responsive920_txt_brk{
-    display: block;
-    }
+display: block;
+}
+.banner_div_REnd{
+position: relative;
+background-color: rgb(26, 160, 170);
+background-image: -webkit-radial-gradient(rgb(68, 139, 167),rgba(63, 194, 187, 0.801));
+border-radius: 0em 11em 0em 11em;
+background-size: fit;
+overflow: hidden;
+position: relative;
+}
 }
 
 
