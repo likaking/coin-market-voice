@@ -322,7 +322,7 @@ display: block;
 flex-direction: column;
 padding-left: 0rem;
 padding-right: 0rem;
-height: 70vh;
+height: 23em;
 background-position: 70%;
 background-size: cover;
 border-radius: 0em 0em 4em 4em;
@@ -341,43 +341,42 @@ justify-content: center;
 align-items: center;
 }
 .banner_div_L{
-    flex: 0.4;
-    }
-    .banner_div_R{
-    flex: 0.2;
-    
-    }
-    .banner_div_REnd{
-    flex: 0.2; 
-    position: relative;
-    border-radius: 0em 0em 4em 4em;
-    overflow: hidden;
-	display: none
-    
-    }
-    .banner_div_L_hdr{
-        line-height: 80%;
-        margin-top: 10%;
-        text-shadow: 1px 1px rgba(150, 207, 229, 0.349);
-        padding-left: 0.2em;
-        }
-        .banner_div_L_hdr2{
-        font-size: 10vw;
-        line-height: 100%;
-        padding: 0;
-        margin: 0;
-        padding-left: 0.2em;  
-        }
-        .banner_div_L_subhdr{
-        text-shadow: 1px 1px rgba(120, 182, 207, 0.247);
-        font-size: 4vw;
-        padding-left: 0.5em;
-        }
-        .banner_div_L_P{
-        font-size: 1.1em;
-        text-shadow: 1px 1px rgba(124, 187, 212, 0.329);
-        display: none;
-        }
+flex: 0.4;
+}
+.banner_div_R{
+flex: 0.2; 
+}
+.banner_div_REnd{
+flex: 0.2; 
+position: relative;
+border-radius: 0em 0em 4em 4em;
+overflow: hidden;
+display: none 
+}
+.banner_div_L_hdr{
+font-size: 6vw;
+line-height: 80%;
+margin-top: 10%;
+text-shadow: 1px 1px rgba(150, 207, 229, 0.349);
+padding-left: 0.2em;
+}
+.banner_div_L_hdr2{
+font-size: 10vw;
+line-height: 100%;
+padding: 0;
+margin: 0;
+padding-left: 0.2em;  
+}
+.banner_div_L_subhdr{
+text-shadow: 1px 1px rgba(120, 182, 207, 0.247);
+font-size: 4vw;
+padding-left: 0.5em;
+}
+.banner_div_L_P{
+font-size: 1.1em;
+text-shadow: 1px 1px rgba(124, 187, 212, 0.329);
+display: none;
+}
 .cmv_device_contianer{
 width: 98%;
 margin: auto;
@@ -445,44 +444,43 @@ align-items: center;
 }
 
 .banner_div_L{
-    flex: 0.4;
-    }
-    .banner_div_R{
-    flex: 0.31;
-    
-    }
-    .banner_div_REnd{
-    flex: 0.29; 
-    position: relative;
-    border-top-right-radius: 10em;
-    border-radius: 0em 0em 0em 0em;
-    overflow: hidden;
-	display: none
-    
-    }
+flex: 0.4;
+}
+.banner_div_R{
+flex: 0.31;   
+}
+.banner_div_REnd{
+flex: 0.29; 
+position: relative;
+border-top-right-radius: 10em;
+border-radius: 0em 0em 0em 0em;
+overflow: hidden;
+display: none  
+}
 .banner_div_L_hdr{
-    line-height: 80%;
-    margin-top: 10%;
-    text-shadow: 1px 1px rgba(150, 207, 229, 0.349);
-    padding-left: 0.2em;
-    }
-    .banner_div_L_hdr2{
-    font-size: 10vw;
-    line-height: 100%;
-    padding: 0;
-    margin: 0;
-    padding-left: 0.2em;  
-    }
-    .banner_div_L_subhdr{
-    text-shadow: 1px 1px rgba(120, 182, 207, 0.247);
-    font-size: 4vw;
-    padding-left: 0.5em;
-    }
-    .banner_div_L_P{
-    font-size: 1.1em;
-    text-shadow: 1px 1px rgba(124, 187, 212, 0.329);
-    display: none;
-    }
+line-height: 80%;
+font-size: 6vw;
+margin-top: 10%;
+text-shadow: 1px 1px rgba(150, 207, 229, 0.349);
+padding-left: 0.2em;
+}
+.banner_div_L_hdr2{
+font-size: 10vw;
+line-height: 100%;
+padding: 0;
+margin: 0;
+padding-left: 0.2em;  
+}
+.banner_div_L_subhdr{
+text-shadow: 1px 1px rgba(120, 182, 207, 0.247);
+font-size: 4vw;
+padding-left: 0.5em;
+}
+.banner_div_L_P{
+font-size: 1.1em;
+text-shadow: 1px 1px rgba(124, 187, 212, 0.329);
+display: none;
+}
 .cmv_device_contianer{
 width: 98%;
 margin: auto;
