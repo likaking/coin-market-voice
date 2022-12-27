@@ -236,7 +236,7 @@ height: 45vw;
 background-position: 30%;
 }
 .cmv_top{ 
-height: 3vh;
+height: 6vh;
 }
 .banner_div_L{
  flex: 0.4;
@@ -319,14 +319,6 @@ font-size: 1rem;
     }
 }
 
-@media screen and (max-width: 770px) {
-.banner_div_REnd{
-flex: 0.35; 
-position: relative;
-background-image: -webkit-linear-gradient(rgb(23, 143, 143),rgb(29, 105, 124));
-border-radius: 0em 10em 0em 10em;
-}	
-}
 
 @media screen and (max-width: 550px) {
 .banner{
