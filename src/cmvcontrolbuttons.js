@@ -294,7 +294,7 @@ return <Iconf key = {icon+index}   id = {colorContBtns === index ?  styles.secon
 })
 */
 } 
-
+<button onMouseDown = {vCoin}>PLay</button>
 <FaRegPlayCircle style={{cursor:'pointer'}}  onMouseDown = {vCoin}/> <FaRegPauseCircle style={{cursor:'pointer'}} onMouseDown = { pause }  /> <ImCancelCircle style={{cursor:'pointer'}} onMouseDown = {stop}  />
 </div>
 <div className={styles.CMVControls_main1_notification}>{cmvAction}</div>
