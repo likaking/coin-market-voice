@@ -188,7 +188,7 @@ if(typeof window !== 'undefined'){
 
 
   function vCoin() {
-    speech.resume()
+   
     hideCmvErrorsx();
    
    setIsPlaying(true);
