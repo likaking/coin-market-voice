@@ -13,7 +13,8 @@ border: 1px solid rgb(94, 129, 139);
 }
 .displayCoin_screen{
 display: flex;
-justify-content: space-between;
+justify-content: flex-start;
+gap:4%;
 width: 100%;
 flex-direction: row;
 height: auto;
@@ -22,9 +23,8 @@ overflow-x: hidden;
 padding: 0.5em;
 margin: auto;
 flex-wrap: wrap;
-
-
 }
+
 .displayCoin_container{
 display: flex;
 width: 22%;
@@ -38,6 +38,7 @@ position: relative;
 box-shadow: 0 1px 2px 0 rgba(180, 180, 180, 0.2), 0 2px 2px 0 rgba(177, 177, 177, 0.19);
 margin-bottom: 1rem;
 }
+
 .displayCoin_img{
 width: auto;
 height: 80%;
@@ -63,6 +64,7 @@ transition-delay: 1s;
 display: none;
 }
 .displayCoin_deleteIcon{
+margin-top:12%;
 color: rgb(94, 129, 139);
 }
 
@@ -105,6 +107,7 @@ display: flex;
 width: 100%;
 flex-direction: row;
 height: auto;
+gap:2.5%;
 word-break: break-all;
 overflow-x: hidden;
 padding: 0.5em;
@@ -125,6 +128,11 @@ margin-bottom: 1.1rem;
 font-weight: 600;
 font-size: 2.3vw;
 }   
+.displayCoin_deleteIcon{
+margin-top:15%;
+color: rgb(94, 129, 139);
+}
+
 }
  
 
@@ -142,6 +150,7 @@ resize: vertical;
 }
 .displayCoin_screen{
 display: flex;
+justify-content:space-between;
 width: 100%;
 flex-direction: row;
 height: auto;
