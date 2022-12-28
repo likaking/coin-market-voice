@@ -188,7 +188,7 @@ if(typeof window !== 'undefined'){
 
 
   function vCoin() {
-    ()=>speech.resume()
+    
     hideCmvErrorsx();
    
    setIsPlaying(true);
@@ -229,6 +229,7 @@ if(typeof window !== 'undefined'){
      .catch((e) => {
      setCmvErrorsx("An error occurred :", e)
      });
+	 speech.resume()
      }
 
 
