@@ -188,7 +188,7 @@ if(typeof window !== 'undefined'){
 
 
   function vCoin() {
-    
+    speech.resume()
     hideCmvErrorsx();
    
    setIsPlaying(true);
@@ -229,7 +229,6 @@ if(typeof window !== 'undefined'){
      .catch((e) => {
      setCmvErrorsx("An error occurred :", e)
      });
-	 speech.resume()
      }
 
 
@@ -263,6 +262,11 @@ if(typeof window !== 'undefined'){
       //setRunOrStop(false);
       setQuickData(true);
     }
+	
+	const resume = ()=>{
+	speech.resume();	
+		
+	}
   
     const startSpeaking = ()=>{
      !runOrStop? setRunOrStop(true) : '';
@@ -285,10 +289,10 @@ return(
 {
 controlIcons.map((icon,index)=>{
 const Iconf = icon;
-return <Iconf key = {icon+index}   id = {colorContBtns === index ?  styles.secondCbtnColor : styles.firstCbtnColor} onMouseDown = {(c)=>{changeControlBtnColor(index);  colorContBtns === 0 && vCoin(); colorContBtns === 1 && pause(); colorContBtns === 2 && stop() }}   />
+return <Iconf key = {icon+index}   id = {colorContBtns === index ?  styles.secondCbtnColor : styles.firstCbtnColor} onMouseDown = {(c)=>{changeControlBtnColor(index);  index === 0 && vCoin(); index === 1 && pause(); index === 2 && stop() }}   />
 })
 } 
-
+<button onClick = {resume} >Resume</button>
 </div>
 <div className={styles.CMVControls_main1_notification}>{cmvAction}</div>
 </div>
