@@ -101,8 +101,8 @@ return(
  {
   addNewCoinData.length > 0 && addCoinInput.current.value !== '' && addNewCoinData.map((coin,i) =>
    i < 1 &&
-    <div key = {coin.id+i} className={styles.cmv_device_addCoinResult} onClick = {()=>{addCoin({id:coin.id,symbol:coin.symbol,name:coin.name,image:coin.image});setAddNewCoinData([])}}><img src = {coin.image} key = {coin.image+i}  className={styles.cmv_device_result_img}/><div key = {coin.name+i}>{coin.name}</div><div className={styles.cmv_device_addCoinResult_click} >click 2 add</div></div>
-    )
+    <div key = {coin.id+i} className={styles.cmv_device_addCoinResult} onClick = {()=>{addCoin({id:coin.id,symbol:coin.symbol,name:coin.name,image:coin.image});setAddNewCoinData([])}}> <img src = {coin.image} key = {coin.image+i}  className={styles.cmv_device_result_img}/> <div  className={styles.cmv_device_result_name} key = {coin.name+i}>{coin.name}</div><div className={styles.cmv_device_addCoinResult_click} >click 2 add</div></div>
+ )
  }
 
  </div>

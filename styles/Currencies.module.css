@@ -24,7 +24,7 @@
 }
 .CMVCurrencies_input{
    flex: 0.5;
-   height: 2.4em;
+   height: 2.8em;
    padding-left: 0.2rem;
    border: 0em;
    color: rgb(53, 91, 102);
@@ -103,7 +103,7 @@
     }
     .CMVCurrencies_input{
        flex: 0.5;
-       height: 2.4em;
+       height: 2.8em;
        padding-left: 0.2rem;
 	   font-size: 1.8vw;
        border: 0em;
@@ -131,16 +131,14 @@
     .CMVCurrencies_currencyInfo{
         position: absolute; 
         width: 50%;
-        padding: 0rem;
-    
-        
+        padding: 0rem;   
     }
     .CMVCurrencies_currencylist{
         padding: 0.2em;
         border: 1px solid rgb(73, 73, 73);  
         border-style: dashed;
     }
-}
+    }
 
 
 
@@ -169,7 +167,7 @@
 }
 .CMVCurrencies_input{
    flex: 0.6;
-   height: 2.4em;
+   height: 2.7em;
    padding-left: 0.2rem;
    font-size: 4.5vw;
 }

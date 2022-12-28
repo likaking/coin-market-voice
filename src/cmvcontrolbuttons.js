@@ -272,7 +272,29 @@ if(typeof window !== 'undefined'){
      !runOrStop? setRunOrStop(true) : '';
      }
 
+  //;  index === 0 && vCoin(); index === 1 && pause(); index === 2 && stop() 
+
+ useEffect(()=>{
+ const controlBtns = ()=>{
    
+ switch(colorContBtns){
+
+ case 0:
+ vCoin()
+ break;
+ case 1:
+ pause()
+ break;
+ case 2:
+ stop()
+ break;
+ default :
+ return null	 
+ }  	  
+ }
+ controlBtns()
+	  
+  },[colorContBtns])
     
 return(
 <>
@@ -288,7 +310,7 @@ return(
 controlIcons.map((icon,index)=>{
     const Iconf = icon;
 
-    return <Iconf key = {icon+index}   id = {colorContBtns === index ?  styles.secondCbtnColor : styles.firstCbtnColor} onClick={(c)=>{changeControlBtnColor(index);  index === 0 && vCoin(); index === 1 && pause(); index === 2 && stop()}}   />
+    return <Iconf key = {icon+index}   id = {colorContBtns === index ?  styles.secondCbtnColor : styles.firstCbtnColor} onClick={(c)=>{changeControlBtnColor(index)}}   />
   
 
 })

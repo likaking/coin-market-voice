@@ -4,7 +4,7 @@ height: 100vh;
 }
 .cmv_top{ 
 width: 100%;
-height: 1.2rem;
+height: 1rem;
 }
 .banner{
 width: 100%;
@@ -39,6 +39,9 @@ border-radius: 0em 11em 0em 11em;
 background-size: fit;
 overflow: hidden;
 position: relative;
+background-image: url('');
+background-repeat: no-repeat;
+background-size:fit-content
 }
 
 .banner_div_REnd_img{
@@ -67,13 +70,13 @@ display: none;
 
 }
 .banner_div_L_hdr{
-color: rgb(27, 167, 177);
+color: rgba(63, 194, 187, 0.801);
 line-height: 80%;
 margin-top: 10%;
 text-shadow: 1px 1px rgba(73, 112, 128, 0.137);
 }
 .banner_div_L_hdr2{
-color: rgb(27, 167, 177);
+color: rgba(63, 194, 187, 0.801);
 font-size: 5vw;
 line-height: 100%;
 padding: 0;
@@ -83,11 +86,11 @@ text-shadow: 1px 1px rgba(133, 144, 148, 0.205);
 
 }
 .banner_div_L_subhdr{
-color: rgb(27, 167, 177);
+color: rgba(63, 194, 187, 0.801);
 text-shadow: 1px 1px rgba(149, 154, 156, 0.137);
 }
 .banner_div_L_P{
-    color: rgb(27, 167, 177);
+color: rgb(27, 167, 177);
 font-size: 1vw;
 }
 .main_cmv_contianer{
@@ -151,8 +154,6 @@ width: 80%;
 position: absolute;
 top:100%;
 display: none;
-
-
 }
 .cmv_device_grabBtn_error{
 font-size: 0.7rem;
@@ -185,25 +186,30 @@ transition: 0.5s;
 
 }
 .cmv_device_addCoinResult{
-height: auto;
+display: flex;
+align-items: center;
+height: 4rem;
 width: 80%;
 font-size: 2vw;
-align-items: center;
-display: flex;
-gap: 0.3rem;
-padding: 0.3rem;
+padding: 0.5rem;
 font-weight: 700;
 color: rgb(53, 51, 51);
 overflow: hidden;
 position: absolute;
 top: 100%;
 background-color: white;
+border-radius: 0rem 0rem 1rem 1rem;
+box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
 z-index: 1;
+}
+.cmv_device_result_name{
+color:rgb(68, 139, 167);
+font-size: 2vw;
 }
 .cmv_device_result_img{
 width: 30px;
 height: auto;
-
+margin-right:0.7rem
 }
 .cmv_device_addCoinResult_click{
 color: rgb(230, 230, 230);
@@ -217,14 +223,8 @@ display: none;
 }
 .banner_div_ImgM{
 display: none;
-    }
+}
    
-
-
-
-
-
-
 /* For mobile screens*/
 @media screen and (max-width: 920px) {
 .banner{
@@ -302,6 +302,15 @@ float: right;
 padding: 0;
 font-size: 1.2rem;
 }
+.cmv_device_result_img{
+width: 35px;
+height: auto;
+margin-right:0.7rem
+}
+.cmv_device_result_name{
+color:rgb(68, 139, 167);
+font-size: 2.5vw;
+}
 .cmv_device_grabBtn_error{
 font-size: 1rem;
 }
@@ -313,7 +322,6 @@ font-size: 1rem;
 .responsive920_txt_brk{
 display: block;
 }
-
 }
 
 
@@ -383,16 +391,16 @@ margin: auto;
 }   
 .cmv_device_input{
 width: 80%;
-height: 2.5rem;
-font-size: 1.2rem;
+height:3.5rem;
+font-size: 1.5rem;
 float: left;
 }
 .cmv_device_grabBtn{
 width: 20%; 
-height: 2.5rem; 
+height: 3.5rem; 
 float: right;
 padding: 0;
-font-size: 1rem;
+font-size: 1.3rem;
 }
 .cmv_device_grabBtn_error{
 font-size: 1rem;
@@ -487,16 +495,16 @@ margin: auto;
 }   
 .cmv_device_input{
 width: 80%;
-height: 2.5rem;
-font-size: 1.2rem;
+height:3.2rem;
+font-size: 1.3rem;
 float: left;
 }
 .cmv_device_grabBtn{
 width: 20%; 
-height: 2.5rem; 
+height: 3.2rem; 
 float: right;
 padding: 0;
-font-size: 1rem;
+font-size: 1.3rem;
 }
 .cmv_device_grabBtn_error{
 font-size: 0.8rem;
@@ -508,10 +516,10 @@ font-size: 0.8rem;
 display: none;
 }
 .banner_div_ImgM{
-    display: block;
-    width: 100%;
-    height: 100%;
-    }
+display: block;
+width: 100%;
+height: 100%;
+}
 }
 
 
