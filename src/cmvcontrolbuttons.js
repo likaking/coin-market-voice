@@ -102,11 +102,11 @@ useEffect(()=>{
 
 
 
-var realTimeUpdate = Number(updateInterval * 60000)
+var realTimeUpdate = updateInterval * 60000
 
 const recompArr = []
 
-console.log(realTimeUpdate)
+
 	
 useEffect(()=>{
 const cryptoUrl = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.toLocaleLowerCase()}&ids=${buy.toString()}
@@ -120,19 +120,19 @@ var teeest = date.getMinutes()
  
 axios.get(cryptoUrl).then((res)=>{setCoinArr(res.data)}).then().catch((err)=>{ showCmvErrorsx('No internet connection')})
    
-}
-else{
-const endUpdate = clearInterval(getLatestCoinInfo)
-showCmvErrorsx('Updates are on hold, press play');
-}
-},realTimeUpdate)
-return ()=> clearInterval(getLatestCoinInfo)
+  }
+  else{
+  const endUpdate = clearInterval(getLatestCoinInfo)
+  showCmvErrorsx('Updates are on hold, press play');
+  }
+  },realTimeUpdate)
+  return ()=> clearInterval(getLatestCoinInfo)
 },[timeInterval.current,buy,counta,runOrStop])
 
-const currencyInfo = {
-style:"currency",
-currency:currency.toUpperCase()
-}
+  const currencyInfo = {
+  style:"currency",
+  currency:currency.toUpperCase()
+  }
 
   const composeMsg = ()=>{
     var date = new Date()
@@ -188,7 +188,11 @@ if(typeof window !== 'undefined'){
 
 
   function vCoin() {
+    
+    hideCmvErrorsx();
    
+   setIsPlaying(true);
+   setRunOrStop(true);
 
      speech.speak({
      text: finalComp.toString(),
@@ -224,11 +228,7 @@ if(typeof window !== 'undefined'){
      })
      .catch((e) => {
      setCmvErrorsx("An error occurred :", e)
-     });
-	  speech.resume()
-      hideCmvErrorsx();
-      setIsPlaying(true);
-      setRunOrStop(true);
+     });speech.resume();
      }
 
 
@@ -262,11 +262,6 @@ if(typeof window !== 'undefined'){
       //setRunOrStop(false);
       setQuickData(true);
     }
-	
-	const resume = ()=>{
-	speech.resume();	
-		
-	}
   
     const startSpeaking = ()=>{
      !runOrStop? setRunOrStop(true) : '';
@@ -274,6 +269,7 @@ if(typeof window !== 'undefined'){
 
   //;  index === 0 && vCoin(); index === 1 && pause(); index === 2 && stop() 
 
+const buttonStyle = [{},{marginLeft:'5%',marginRight:'5%'},{}]
     
 return(
 <>
@@ -289,10 +285,10 @@ return(
 {
 controlIcons.map((icon,index)=>{
 const Iconf = icon;
-return <Iconf key = {icon+index}   id = {colorContBtns === index ?  styles.secondCbtnColor : styles.firstCbtnColor} onMouseDown = {(c)=>{changeControlBtnColor(index);  index === 0 && vCoin(); index === 1 && pause(); index === 2 && stop() }}   />
+return <Iconf key = {icon+index}   id = {colorContBtns === index ?  styles.secondCbtnColor : styles.firstCbtnColor} onMouseDown = {(c)=>{changeControlBtnColor(index);  index === 0 && vCoin(); index === 1 && pause(); index === 2 && stop() }}   style = {buttonStyle[index]} />
 })
 } 
-<button onClick = {resume} >Resume</button>
+
 </div>
 <div className={styles.CMVControls_main1_notification}>{cmvAction}</div>
 </div>
@@ -301,6 +297,7 @@ return <Iconf key = {icon+index}   id = {colorContBtns === index ?  styles.secon
 <div>Voice</div>
 <div>Every</div>
 </div>
+{' '}
 <div className={styles.CMVControls_main1_input_time}>
 <input type='number' title='You can change the value' defaultValue= {updateInterval}   className={styles.CMVControls_main1_input_box} ref = {timeInterval}  onChange={(t)=>{newTime(t);fixMinutes();setRunOrStop(false)}} onMouseOver = {hideMinutesField} onMouseLeave = {showMinutesField} onBlur={()=>{hideCmvErrorsx();setQuickData(true)}} /></div>
 <p className={styles.CMVControls_main1_minute} ref = {minutesField}>{minutes}</p>

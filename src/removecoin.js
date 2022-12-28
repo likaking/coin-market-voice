@@ -46,7 +46,9 @@ onMouseLeave = {()=>{deleteIcon.current[i].style.display = 'none'}} >
 <img src = {display.image} alt ={display.name} className={styles.displayCoin_img}/>
 <div  className={styles.displayCoin_name}>{display.symbol !== undefined? display.symbol.toUpperCase() : ''}</div>
 <div className={styles.displayCoin_delete} ref = {(el)=> {deleteIcon.current[i] = el}}>
-<FaTrashAlt className={styles.displayCoin_deleteIcon}  onClick={()=>{removeAsset(display.id)}}/></div></div>
+<div className={styles.displayCoin_playNdelete}><FaTrashAlt className={styles.displayCoin_deleteIcon}  onClick={()=>{removeAsset(display.id)}}/></div>
+</div>
+</div>
 )   
 }
 </div>

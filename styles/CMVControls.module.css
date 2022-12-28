@@ -32,7 +32,6 @@ display: flex;
 justify-content: flex-start;
 align-items: center;
 font-size: 3.6vw;
-gap: 7%;
 }
 .CMVControls_main1_notification{
 flex: 0.3;
@@ -41,7 +40,6 @@ color: rgb(53, 91, 102);
 .CMVControls_main1_inputControl{
 flex: 0.3;
 display: flex;
-gap: 3%;
 justify-content: center;
 align-items: center;
 overflow: hidden;
@@ -49,6 +47,7 @@ position: relative;
 }
 .CMVControls_main1_updateTxt{
 margin-left: auto;
+margin-right:0.8vw;
 display: flex;
 font-size: 1vw;
 font-weight: 500;
@@ -62,18 +61,21 @@ font-size: 3.5vw;
 color: rgb(74, 125, 139);
 border: 0;
 background-color: transparent;
+
 }
 .CMVControls_main1_minute{
 position: absolute;
 font-size: 0.9vw;
 right: 3%;
+margin-top:auto;
+margin-bottom:auto;
+height:30%;
 padding: 0rem 0.3rem 0rem 0.3rem;
 border-radius: 10vw;
 border: 0px solid rgb(34, 33, 33);
 color: rgb(74, 125, 139);
 background-color: rgba(251, 253, 253, 0.836);
 box-shadow: 0 1px 2px 0 rgba(180, 180, 180, 0.2), 0 2px 2px 0 rgba(177, 177, 177, 0.19);
-
 }
 .CMVControls_main1_play_btn{
 padding: 0;
@@ -130,7 +132,6 @@ position: relative;
 .CMVControls_main1_btns{
 flex: 0.7;
 font-size: 7vw;
-gap: 10%
 }
 .CMVControls_main1_inputControl{
 flex: 0.3;
@@ -217,7 +218,6 @@ line-height: 150%;
         justify-content: flex-start;
         align-items: center;
         font-size: 10vw;
-        gap: 7%;
         }
         .CMVControls_main1_notification{
         flex: 0.3;
@@ -312,7 +312,6 @@ line-height: 150%;
             justify-content: flex-start;
             align-items: center;
             font-size: 12vw;
-            gap: 5%;
             }
             .CMVControls_main1_notification{
             flex: 0.3;

@@ -64,8 +64,10 @@ transition-delay: 1s;
 display: none;
 }
 .displayCoin_deleteIcon{
-margin-top:12%;
 color: rgb(94, 129, 139);
+}
+.displayCoin_playNdelete{
+
 }
 
 
@@ -129,10 +131,8 @@ font-weight: 600;
 font-size: 2.3vw;
 }   
 .displayCoin_deleteIcon{
-margin-top:15%;
 color: rgb(94, 129, 139);
 }
-
 }
  
 
@@ -160,7 +160,6 @@ padding: 0.5em;
 margin: auto;
 flex-wrap: wrap;
 }
-
 .displayCoin_container{
 display: flex;
 width: 31%;
@@ -178,6 +177,9 @@ font-size: 4vw;
 font-weight: 600;
 font-size: 4vw;
 }  
+.displayCoin_deleteIcon{
+color: rgb(94, 129, 139);
+}
 }
         
 @media screen and (max-width: 430px) {
@@ -206,7 +208,7 @@ flex-wrap: wrap;
 .displayCoin_container{
 display: flex;
 width: 48%;
-height: 4rem;
+height: 20vw;
 align-items: center;
 padding: 0.4rem;
 word-break: break-all;
@@ -215,11 +217,12 @@ margin-bottom: 0.8rem;
 }
 .displayCoin_deleteIcon{
 font-size: 6vw;
+color: rgb(94, 129, 139);
 }
 .displayCoin_name{
 font-weight: 600;
 font-size: 5vw;
-}  
+} 
 }
     
     
