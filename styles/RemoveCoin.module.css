@@ -67,7 +67,12 @@ display: none;
 color: rgb(94, 129, 139);
 }
 .displayCoin_playNdelete{
-
+display:flex;
+margin: 0;
+position: absolute;
+top: 50%;
+-ms-transform: translateY(-50%);
+transform: translateY(-50%);
 }
 
 

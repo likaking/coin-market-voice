@@ -64,11 +64,13 @@ background-color: transparent;
 
 }
 .CMVControls_main1_minute{
-position: absolute;
 font-size: 0.9vw;
 right: 3%;
-margin-top:auto;
-margin-bottom:auto;
+margin: 0;
+position: absolute;
+top: 50%;
+-ms-transform: translateY(-50%);
+transform: translateY(-50%);
 height:30%;
 padding: 0rem 0.3rem 0rem 0.3rem;
 border-radius: 10vw;
