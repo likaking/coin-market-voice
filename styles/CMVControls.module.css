@@ -105,10 +105,12 @@ padding-top: 1rem;
 }
 #firstCbtnColor{
 color:rgb(153, 178, 185);
- transition: .8s;
+cursor:pointer;
+transition: .8s;
 }
 #secondCbtnColor{
 color:rgb(95, 154, 172);
+cursor:pointer;
 transition: .5s; 
 }
 
@@ -185,7 +187,7 @@ line-height: 150%;
 
 @media screen and (max-width: 550px) {
     .CMVControls{
-        width: 98%;
+        width: 95%;
         margin: auto;
        
         }
@@ -280,7 +282,7 @@ line-height: 150%;
 
     @media screen and (max-width: 430px) {
         .CMVControls{
-            width: 98%;
+            width: 95%;
             margin: auto;
            
             }

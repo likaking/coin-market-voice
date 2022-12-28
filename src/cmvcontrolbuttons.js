@@ -2,7 +2,7 @@ import React, {Suspense, useState,useEffect,useRef} from 'react';
 import {FaBars,FaPlay,FaPause,FaPlayCircle,FaRegPlayCircle,FaRegPauseCircle} from 'react-icons/fa'
 import {BsFillPlayFill,BsPlayCircleFill,BsPauseCircleFill} from 'react-icons/bs'
 import {ImCancelCircle} from 'react-icons/im'
-import  {FontAwesome} from 'react-icons/fa'
+import {FontAwesome} from 'react-icons/fa'
 import axios from 'axios'
 import styles from '../styles/CMVControls.module.css'
 import Speech from 'speak-tts'
@@ -92,8 +92,7 @@ useEffect(()=>{
     const cryptoUrlQuick = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.toLocaleLowerCase()}&ids=${buy.toString()}
     &order=market_cap_desc&per_page=250&page=1&sparkline=false`
     axios.get(cryptoUrlQuick).then((res)=>{setCoinArr(res.data)}).then(()=>{}).catch((err)=>{showCmvErrorsx('Unsuported currency')})
-   
-  }
+    }
 
  setQuickData(false)
 },[quickData])
@@ -103,40 +102,37 @@ useEffect(()=>{
 
 
 
-var realTimeUpdate = updateInterval * 60000
+var realTimeUpdate = Number(updateInterval * 60000)
 
 const recompArr = []
 
-
+console.log(realTimeUpdate)
 	
 useEffect(()=>{
-	  const cryptoUrl = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.toLocaleLowerCase()}&ids=${buy.toString()}
-    &order=market_cap_desc&per_page=250&page=1&sparkline=false`
-  hideCmvErrorsx()
-const getLatestCoinInfo = setInterval(()=>{
-    if(runOrStop && timeInterval.current.value !== '' && timeInterval.current.value > 0 && buy.length > 0 ){
-    var date = new Date()
-    var teeest = date.getMinutes()
-  
-    axios.get(cryptoUrl).then((res)=>{setCoinArr(res.data)}).then().catch((err)=>{ showCmvErrorsx('No internet connection')})
-    
- 
-  }
-  else{
-    const endUpdate = clearInterval(getLatestCoinInfo)
-    showCmvErrorsx('Updates are on hold, press play');
-    
+const cryptoUrl = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.toLocaleLowerCase()}&ids=${buy.toString()}
+&order=market_cap_desc&per_page=250&page=1&sparkline=false`
 
-  }
-  },realTimeUpdate)
-  return ()=> clearInterval(getLatestCoinInfo)
+hideCmvErrorsx()
+const getLatestCoinInfo = setInterval(()=>{
+if(runOrStop && timeInterval.current.value !== '' && timeInterval.current.value > 0 && buy.length > 0 ){
+var date = new Date()
+var teeest = date.getMinutes()
+ 
+axios.get(cryptoUrl).then((res)=>{setCoinArr(res.data)}).then().catch((err)=>{ showCmvErrorsx('No internet connection')})
+   
+}
+else{
+const endUpdate = clearInterval(getLatestCoinInfo)
+showCmvErrorsx('Updates are on hold, press play');
+}
+},realTimeUpdate)
+return ()=> clearInterval(getLatestCoinInfo)
 },[timeInterval.current,buy,counta,runOrStop])
 
-
-  const currencyInfo = {
-    style:"currency",
-    currency:currency.toUpperCase()
-  }
+const currencyInfo = {
+style:"currency",
+currency:currency.toUpperCase()
+}
 
   const composeMsg = ()=>{
     var date = new Date()
@@ -154,6 +150,8 @@ const getLatestCoinInfo = setInterval(()=>{
     useEffect(()=>{
         composeMsg()
         },[coinArr,replay,isPlaying])
+		
+		
   const clearTime = ()=>{
   }
 
@@ -190,7 +188,7 @@ if(typeof window !== 'undefined'){
 
 
   function vCoin() {
-    
+    speech.resume()
     hideCmvErrorsx();
    
    setIsPlaying(true);
@@ -230,7 +228,7 @@ if(typeof window !== 'undefined'){
      })
      .catch((e) => {
      setCmvErrorsx("An error occurred :", e)
-     });speech.resume();
+     });
      }
 
 
