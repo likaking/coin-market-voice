@@ -188,7 +188,7 @@ if(typeof window !== 'undefined'){
 
 
   function vCoin() {
-    speech.resume()
+    ()=>speech.resume()
     hideCmvErrorsx();
    
    setIsPlaying(true);
@@ -251,9 +251,9 @@ if(typeof window !== 'undefined'){
     },[updateInterval])
 
     const pause = ()=>{
-      //setRunOrStop(false);
+      setRunOrStop(false);
       speech.pause();
-      //setIsPlaying(false)
+      setIsPlaying(false)
     }
 
     const stop = ()=>{
