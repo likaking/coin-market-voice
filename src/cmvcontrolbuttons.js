@@ -285,7 +285,7 @@ return(
 {
 controlIcons.map((icon,index)=>{
 const Iconf = icon;
-return <Iconf key = {icon+index}   id = {colorContBtns === index ?  styles.secondCbtnColor : styles.firstCbtnColor} onMouseDown = {(c)=>{changeControlBtnColor(index);  index === 0 && vCoin(); index === 1 && pause(); index === 2 && stop() }}   />
+return <Iconf key = {icon+index}   id = {colorContBtns === index ?  styles.secondCbtnColor : styles.firstCbtnColor} onMouseDown = {(c)=>{changeControlBtnColor(index);  colorContBtns === 0 && vCoin(); colorContBtns === 1 && pause(); colorContBtns === 2 && stop() }}   />
 })
 } 
 
