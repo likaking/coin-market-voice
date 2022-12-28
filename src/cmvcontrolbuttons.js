@@ -274,27 +274,6 @@ if(typeof window !== 'undefined'){
 
   //;  index === 0 && vCoin(); index === 1 && pause(); index === 2 && stop() 
 
- useEffect(()=>{
- const controlBtns = ()=>{
-   
- switch(colorContBtns){
-
- case 0:
- vCoin()
- break;
- case 1:
- pause()
- break;
- case 2:
- stop()
- break;
- default :
- return null	 
- }  	  
- }
- controlBtns()
-	  
-  },[colorContBtns])
     
 return(
 <>
@@ -305,16 +284,18 @@ return(
 <div className={styles.CMVControls_main1_playPause}>
 <div className={styles.CMVControls_main1_btns}> 
 
+
+
 {
-
+	/*
 controlIcons.map((icon,index)=>{
-    const Iconf = icon;
-
-    return <Iconf key = {icon+index}   id = {colorContBtns === index ?  styles.secondCbtnColor : styles.firstCbtnColor} onClick={(c)=>{changeControlBtnColor(index)}}   />
-  
-
+const Iconf = icon;
+return <Iconf key = {icon+index}   id = {colorContBtns === index ?  styles.secondCbtnColor : styles.firstCbtnColor} onClick={(c)=>{changeControlBtnColor(index)}}   />
 })
+*/
 } 
+
+<FaRegPlayCircle onClick = {()=> vCoin()} /> <FaRegPauseCircle  onClick = {()=> pause() }  /> <ImCancelCircle  onClick = {()=> stop()}  />
 </div>
 <div className={styles.CMVControls_main1_notification}>{cmvAction}</div>
 </div>
