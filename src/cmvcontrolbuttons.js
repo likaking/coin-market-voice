@@ -264,7 +264,7 @@ if(typeof window !== 'undefined'){
     }
 	
 	const resume = ()=>{
-	speech.resume();	
+	//speech.resume();	
 		
 	}
   
