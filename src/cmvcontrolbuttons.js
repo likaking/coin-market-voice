@@ -188,11 +188,7 @@ if(typeof window !== 'undefined'){
 
 
   function vCoin() {
-    speech.resume()
-    hideCmvErrorsx();
    
-   setIsPlaying(true);
-   setRunOrStop(true);
 
      speech.speak({
      text: finalComp.toString(),
@@ -229,6 +225,10 @@ if(typeof window !== 'undefined'){
      .catch((e) => {
      setCmvErrorsx("An error occurred :", e)
      });
+	  speech.resume()
+      hideCmvErrorsx();
+      setIsPlaying(true);
+      setRunOrStop(true);
      }
 
 
@@ -264,7 +264,7 @@ if(typeof window !== 'undefined'){
     }
 	
 	const resume = ()=>{
-	//speech.resume();	
+	speech.resume();	
 		
 	}
   
