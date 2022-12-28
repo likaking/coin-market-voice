@@ -139,7 +139,7 @@ color: rgb(94, 129, 139);
 
 @media screen and (max-width: 550px) {
 .displayCoin{
-width: 95%;
+width: 100%;
 }
 .displayCoin_main{
 height: 15.3em;
@@ -182,14 +182,11 @@ font-size: 4vw;
         
 @media screen and (max-width: 430px) {
 .displayCoin{
-width: 95%;
-}  
-.displayCoin{
 width: 100%;
 }
 .displayCoin_main{
 height: 15em;
-width: 98%;
+width: 95%;
 margin: auto;
 overflow: auto;
 resize: vertical;

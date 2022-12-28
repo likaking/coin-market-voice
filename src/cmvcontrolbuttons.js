@@ -153,7 +153,7 @@ const getLatestCoinInfo = setInterval(()=>{
     }
     useEffect(()=>{
         composeMsg()
-        },[coinArr,replay])
+        },[coinArr,replay,isPlaying])
   const clearTime = ()=>{
   }
 
@@ -193,9 +193,6 @@ if(typeof window !== 'undefined'){
     
     hideCmvErrorsx();
    
-   // ()=>speech.setLanguage(currentLang);
-   // ()=>speech.setVoice(currentVoice)
-   //quickData? setQuickData(false) : '';
    setIsPlaying(true);
    setRunOrStop(true);
 
@@ -287,15 +284,12 @@ return(
 
 
 {
-	/*
 controlIcons.map((icon,index)=>{
 const Iconf = icon;
-return <Iconf key = {icon+index}   id = {colorContBtns === index ?  styles.secondCbtnColor : styles.firstCbtnColor} onClick={(c)=>{changeControlBtnColor(index)}}   />
+return <Iconf key = {icon+index}   id = {colorContBtns === index ?  styles.secondCbtnColor : styles.firstCbtnColor} onMouseDown = {(c)=>{changeControlBtnColor(index);  index === 0 && vCoin(); index === 1 && pause(); index === 2 && stop() }}   />
 })
-*/
 } 
-<button onMouseDown = {vCoin}>PLay</button>
-<FaRegPlayCircle style={{cursor:'pointer'}}  onMouseDown = {vCoin}/> <FaRegPauseCircle style={{cursor:'pointer'}} onMouseDown = { pause }  /> <ImCancelCircle style={{cursor:'pointer'}} onMouseDown = {stop}  />
+
 </div>
 <div className={styles.CMVControls_main1_notification}>{cmvAction}</div>
 </div>
