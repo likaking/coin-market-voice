@@ -56,7 +56,7 @@ export default function Home(setCmvErrorsx={setCmvErrorsx}) {
   const [info, setInfo] = useState(true)
   const [quickData, setQuickData] = useState(false)
   const [runOrStop,setRunOrStop] = useState(true)
-  const [playCoinInfo,setPlayCoinInfo] = useState('bitcoin')
+  const [playCoinInfo,setPlayCoinInfo] = useState('')
   
   //For Playing each coin info *paused*
   const [paused,setPaused] = useState(false)
@@ -108,7 +108,7 @@ const updateCurrenccy = useEffect(()=>{
 
 useEffect(()=>{
   const welcome = (setCmvErrorsx)=>{
-  axios.get(url).then((res)=>{setCoinArr(res.data)}).catch((err)=> {()=>setCmvErrorsx('No internet connection')})
+  axios.get(url).then((res)=>{setCoinArr(res.data)}).catch((err)=> {console.log(err);()=>setCmvErrorsx('No internet connection')})
   
 }
   welcome ()

@@ -6,7 +6,7 @@ import styles from '../styles/RemoveCoin.module.css'
 import {FaTrashAlt} from 'react-icons/fa'
 import {addCoin,buy,activeCoins,AddCrypto,coinIsexistinErr} from '../src/addcoin.js'
 import {FaBars,FaPlay,FaPause,FaPlayCircle,FaRegPlayCircle,FaRegPauseCircle} from 'react-icons/fa'
-import {vCoin,pause} from '../src/speechFunc.js'
+import {Voicecoin,pause} from '../src/speechFunc.js'
 
 
 
@@ -102,7 +102,7 @@ onMouseLeave = {()=>{deleteIcon.current[i].style.display = 'none'}} >
 <div className={styles.displayCoin_delete} ref = {(el)=> {deleteIcon.current[i] = el}}>
 <div className={styles.displayCoin_playNdelete}> <div className={styles.displayCoin_playNpause}> 
 <span  key = {display.name+'play'+i}  className={styles.displayCoin_playIcon} ref = {(myPlayIcon)=> playIcon.current[i] = myPlayIcon} 
-onMouseDown = {()=> {playVoice(i,display.id);resetPlayed(i);addCoinId(display.id);vCoin()}}  > <FaRegPlayCircle style={{verticalAlign:'bottom'}} /> </span> 
+onMouseDown = {()=> {playVoice(i,display.id);resetPlayed(i);addCoinId(display.id);Voicecoin('Like A King Company')}}  > <FaRegPlayCircle style={{verticalAlign:'bottom'}} /> </span> 
 <span  key = {display.name+'pause'+i}  className={styles.displayCoin_pauseIcon} style = {{display: play ? 'block' : 'none'}} 
 ref = {(myPlayIcon)=> pauseIcon.current[i] = myPlayIcon} onMouseDown = {()=> pauseVoice(i,display.id)}>
 <FaRegPauseCircle /> </span> </div> <div className={styles.displayCoin_deleteIcon_container}><FaTrashAlt className={styles.displayCoin_deleteIcon}  onClick={()=>{removeAsset(display.id)}}/></div> </div>

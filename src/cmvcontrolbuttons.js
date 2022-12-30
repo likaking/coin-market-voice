@@ -7,15 +7,14 @@ import axios from 'axios'
 import styles from '../styles/CMVControls.module.css'
 import Speech from 'speak-tts'
 import {Currencies} from '../src/currencies.js'
-import {vCoin} from '../src/speechFunc.js'
+import {Voicecoin,pause,stop} from '../src/speechFunc.js'
 
 
 
 const controlIcons = [FaRegPlayCircle,FaRegPauseCircle,ImCancelCircle]
 
-export function CMVControls({currencryMap,coinArr,activeCoins,finalComp,
-setFinalComp,setCoinArr,currency, setCurrency,buy,quickData,setQuickData,runOrStop,setRunOrStop,currencySingular,currencyPlural,
-playCoinInfo,setPlayCoinInfo,paused,setPaused}){
+export function CMVControls({currencryMap,coinArr,activeCoins,finalComp,setFinalComp,setCoinArr,currency, setCurrency,buy,quickData,setQuickData,
+runOrStop,setRunOrStop,currencySingular,currencyPlural,playCoinInfo,setPlayCoinInfo,paused,setPaused}){
 	
 
 const [updateInterval,setUpdateInterval] = useState(1) 
@@ -202,7 +201,7 @@ axios.get(cryptoUrl).then((res)=>{setCoinArr(res.data)}).then().catch((err)=>{ s
       recompArr.push(recomp +' ' + ' ' + ' ' + ' '+ ' ')
     })
     setFinalComp(recompArr.toString()); 
-    isPlaying && vCoin() 
+   // isPlaying && vCoin() 
     }
     useEffect(()=>{
     composeMsg()
@@ -218,7 +217,7 @@ axios.get(cryptoUrl).then((res)=>{setCoinArr(res.data)}).then().catch((err)=>{ s
   }
   
   //console.log(finalComp)
-
+/*
 if(typeof window !== 'undefined'){
     var speech = new Speech() // will throw an exception if not browser supported
     if(speech.hasBrowserSupport()) { // returns a boolean
@@ -245,7 +244,7 @@ if(typeof window !== 'undefined'){
     setCmvErrorsx("An error occurred :", e)
     });
     }
-   
+   */
 
     const fixCurrency = (currency)=>{
     setCurrency(currency)
@@ -261,19 +260,21 @@ if(typeof window !== 'undefined'){
     const updateNewTime = useEffect((t)=>{
     
     },[updateInterval])
-
+    /*
     const pause = ()=>{
       setRunOrStop(false);
       speech.pause();
       setIsPlaying(false)
     }
-
+	*/
+   /*
     const stop = ()=>{
       speech.cancel();
       setIsPlaying(false)
       //setRunOrStop(false);
       setQuickData(true);
     }
+	*/
   
     const startSpeaking = ()=>{
      !runOrStop? setRunOrStop(true) : '';
@@ -284,6 +285,7 @@ const buttonStyle = [{lineHeight:'90%'},{marginLeft:'5%',marginRight:'5%',lineHe
     
 return(
 <>
+
 <div className={styles.CMVControls}>
 <div className={styles.CMVControls_main}>
 <p className={styles.cmv_device_play_error} ref={cmvErrorsxHolder}>{cmvErrorsx}</p>
@@ -293,7 +295,7 @@ return(
 {
 controlIcons.map((icon,index)=>{
 const Iconf = icon;
-return <span style = {buttonStyle[index]} key = {icon+index} ><Iconf  style = {{verticalAlign:'top'}}  id = {colorContBtns === index ?  styles.secondCbtnColor : styles.firstCbtnColor} onMouseDown = {(c)=>{changeControlBtnColor(index);  index === 0 && vCoin(); index === 1 && pause(); index === 2 && stop() }} /></span>
+return <span style = {buttonStyle[index]} key = {icon+index} ><Iconf  style = {{verticalAlign:'top'}}  id = {colorContBtns === index ?  styles.secondCbtnColor : styles.firstCbtnColor} onMouseDown = {(c)=>{changeControlBtnColor(index);  index === 0 && Voicecoin(finalComp); index === 1 && pause(); index === 2 && stop() }} /></span>
 })
 } 
 
@@ -312,8 +314,7 @@ return <span style = {buttonStyle[index]} key = {icon+index} ><Iconf  style = {{
 </div>
 </div>
 </div> 
-</div>
-    
+</div> 
 </>
 )
 }
