@@ -199,11 +199,11 @@ line-height: 150%;
         width: 100%;
         margin: auto;
         position: relative;
+		
         }
         .CMVControls_main1{
         padding: 0.5em;
-        display: flex;
-        
+        display: flex;      
         }
         .CMVControls_main2{
         }

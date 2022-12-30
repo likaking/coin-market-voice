@@ -68,11 +68,39 @@ color: rgb(94, 129, 139);
 }
 .displayCoin_playNdelete{
 display:flex;
+justify-content:flex-end;
+width:100%;
+height:85%;
+padding:0.3rem;
 margin: 0;
 position: absolute;
 top: 50%;
 -ms-transform: translateY(-50%);
 transform: translateY(-50%);
+}
+.displayCoin_playNpause{
+display:flex;
+color: rgb(94, 129, 139);
+font-size:2rem;	
+position:relative;
+width:25%;
+height:auto;
+}
+.displayCoin_deleteIcon_container{
+display:flex;
+justify-content:center;
+align-items:center;
+margin-left:2rem;
+}
+.displayCoin_playIcon{
+position: absolute;	
+top:-10%;
+line-height:80%;
+}
+.displayCoin_pauseIcon{
+position: absolute;	
+top:-10%;
+line-height:80%;
 }
 
 
@@ -138,6 +166,26 @@ font-size: 2.3vw;
 .displayCoin_deleteIcon{
 color: rgb(94, 129, 139);
 }
+.displayCoin_playNdelete{
+display:flex;
+justify-content:flex-end;
+width:100%;
+height:85%;
+padding:0.3rem;
+margin: 0;
+position: absolute;
+top: 50%;
+-ms-transform: translateY(-50%);
+transform: translateY(-50%);
+}
+.displayCoin_playNpause{
+display:flex;
+color: rgb(94, 129, 139);
+font-size:2.5rem;	
+position:relative;
+width:25%;
+height:auto;
+}
 }
  
 
@@ -147,8 +195,8 @@ color: rgb(94, 129, 139);
 width: 100%;
 }
 .displayCoin_main{
-height: 15.3em;
-width: 98%;
+height: 25em;
+width: 95%;
 margin: auto;
 overflow: auto;
 resize: vertical;
@@ -185,6 +233,26 @@ font-size: 4vw;
 .displayCoin_deleteIcon{
 color: rgb(94, 129, 139);
 }
+.displayCoin_playNdelete{
+display:flex;
+justify-content:flex-end;
+width:100%;
+height:80%;
+padding:0.3rem;
+margin: 0;
+position: absolute;
+top: 50%;
+-ms-transform: translateY(-50%);
+transform: translateY(-50%);
+}
+.displayCoin_playNpause{
+display:flex;
+color: rgb(94, 129, 139);
+font-size:2.8rem;	
+position:relative;
+width:25%;
+height:auto;
+}
 }
         
 @media screen and (max-width: 430px) {
@@ -192,7 +260,7 @@ color: rgb(94, 129, 139);
 width: 100%;
 }
 .displayCoin_main{
-height: 15em;
+height: 25em;
 width: 95%;
 margin: auto;
 overflow: auto;
@@ -213,7 +281,7 @@ flex-wrap: wrap;
 .displayCoin_container{
 display: flex;
 width: 48%;
-height: 20vw;
+height: 18vw;
 align-items: center;
 padding: 0.4rem;
 word-break: break-all;
@@ -228,6 +296,26 @@ color: rgb(94, 129, 139);
 font-weight: 600;
 font-size: 5vw;
 } 
+.displayCoin_playNdelete{
+display:flex;
+justify-content:flex-end;
+width:100%;
+height:80%;
+padding:0.3rem;
+margin: 0;
+position: absolute;
+top: 50%;
+-ms-transform: translateY(-50%);
+transform: translateY(-50%);
+}
+.displayCoin_playNpause{
+display:flex;
+color: rgb(94, 129, 139);
+font-size:3.5rem;	
+position:relative;
+width:25%;
+height:auto;
+}
 }
     
     

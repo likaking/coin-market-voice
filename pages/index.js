@@ -56,6 +56,11 @@ export default function Home(setCmvErrorsx={setCmvErrorsx}) {
   const [info, setInfo] = useState(true)
   const [quickData, setQuickData] = useState(false)
   const [runOrStop,setRunOrStop] = useState(true)
+  const [playCoinInfo,setPlayCoinInfo] = useState('bitcoin')
+  
+  //For Playing each coin info *paused*
+  const [paused,setPaused] = useState(false)
+  
   
 
   
@@ -103,7 +108,7 @@ const updateCurrenccy = useEffect(()=>{
 
 useEffect(()=>{
   const welcome = (setCmvErrorsx)=>{
-  axios.get(url).then((res)=>{setCoinArr(res.data)}).then(()=>{}).catch((err)=> {console.log(err);()=>setCmvErrorsx('No internet connection')})
+  axios.get(url).then((res)=>{setCoinArr(res.data)}).catch((err)=> {()=>setCmvErrorsx('No internet connection')})
   
 }
   welcome ()
@@ -194,16 +199,18 @@ detectSpeech()
 
   <AddCrypto activeCoins={activeCoins} buy={buy} setBuy={setBuy} setActiveCoins={setActiveCoins} currency={currency} speech={Speech} quickData={quickData} setQuickData={setQuickData} setCoinArr={setCoinArr} setRunOrStop={setRunOrStop}/>
 
-  <DisplayCoin activeCoins={activeCoins} buy={buy} setBuy={setBuy} setActiveCoins={setActiveCoins} Speech={Speech} setQuickData={setQuickData} setCoinArr={setCoinArr} />
+  <DisplayCoin activeCoins={activeCoins} buy={buy} setBuy={setBuy} setActiveCoins={setActiveCoins} Speech={Speech} setQuickData={setQuickData}
+  setCoinArr={setCoinArr} playCoinInfo={playCoinInfo} setPlayCoinInfo={setPlayCoinInfo} paused={paused} setPaused={setPaused} />
 
   <CMVControls currencryMap={currencryMap} coinArr={coinArr} activeCoins={activeCoins} finalComp={finalComp}
    setFinalComp={setFinalComp} setCoinArr={setCoinArr} currency={currency} setCurrency={setCurrency}
-    buy = {buy} quickData={quickData} setQuickData={setQuickData} runOrStop={runOrStop} 
-    setRunOrStop={setRunOrStop} currencySingular={currencySingular} currencyPlural={currencyPlural}  />
+   buy = {buy} quickData={quickData} setQuickData={setQuickData} runOrStop={runOrStop} 
+   setRunOrStop={setRunOrStop} currencySingular={currencySingular} currencyPlural={currencyPlural} playCoinInfo={playCoinInfo} 
+   setPlayCoinInfo={setPlayCoinInfo} paused={paused} setPaused={setPaused}   />
 
   <Currencies currency={currency} setCurrency={setCurrency} currencyPlural={currencyPlural} 
-  setCurrencyPlural={setCurrencyPlural} speech={Speech} runOrStop={runOrStop} 
-  setRunOrStop={setRunOrStop} setFinalComp= {setFinalComp} finalComp={finalComp}
+   setCurrencyPlural={setCurrencyPlural} speech={Speech} runOrStop={runOrStop} 
+   setRunOrStop={setRunOrStop} setFinalComp= {setFinalComp} finalComp={finalComp}
    coinArr={coinArr} setCoinArr={setCoinArr} setQuickData={setQuickData} quickData={quickData}
    currencySingular={currencySingular} setCurrencySingular={setCurrencySingular} />
  

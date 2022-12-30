@@ -7,14 +7,16 @@ import axios from 'axios'
 import styles from '../styles/CMVControls.module.css'
 import Speech from 'speak-tts'
 import {Currencies} from '../src/currencies.js'
+import {vCoin} from '../src/speechFunc.js'
 
 
 
 const controlIcons = [FaRegPlayCircle,FaRegPauseCircle,ImCancelCircle]
 
 export function CMVControls({currencryMap,coinArr,activeCoins,finalComp,
-setFinalComp,setCoinArr,currency, setCurrency,buy,quickData,setQuickData,runOrStop,setRunOrStop,
-currencySingular,currencyPlural}){
+setFinalComp,setCoinArr,currency, setCurrency,buy,quickData,setQuickData,runOrStop,setRunOrStop,currencySingular,currencyPlural,
+playCoinInfo,setPlayCoinInfo,paused,setPaused}){
+	
 
 const [updateInterval,setUpdateInterval] = useState(1) 
 const [minutes,setMinutes] = useState('Minute')
@@ -39,10 +41,8 @@ const stopUdatingInfo = useRef()
 const cmvErrorsxHolder = useRef(null)
 
 
-
-
 const changeControlBtnColor = (c)=>{
-    setColorContBtns(c)
+setColorContBtns(c)
 }
 
 let allLang = ['ar-SA', 'cs-CZ', 'da-DK', 'de-DE', 'el-GR', 'en', 'en-AU', 'en-GB', 'en-IE', 'en-IN', 'en-US', 'en-ZA', 'es-AR', 'es-ES', 'es-MX', 'es-US', 'fi-FI', 'fr-CA', 'fr-FR', 'he-IL', 'hi-IN', 'hu-HU', 'id-ID', 'it-IT', 'ja-JP', 'ko-KR', 'nb-NO', 'nl-BE', 'nl-NL', 'pl-PL', 'pt-BR', 'pt-PT', 'ro-RO', 'ru-RU', 'sk-SK', 'sv-SE', 'th-TH', 'tr-TR', 'zh-CN', 'zh-HK', 'zh-TW',
@@ -85,41 +85,97 @@ const hideCmvErrorsx = ()=>{
 }
 
 
+/*
+  function vCoin() {
+	  
+	  console.log('running speech function')
+    
+    hideCmvErrorsx();
+   
+   setIsPlaying(true);
+   setRunOrStop(true);
+
+     speech.speak({
+     text: finalComp.toString(),
+     queue: false,
+     listeners: {
+     onstart: () => {
+     setCmvAction("Playing...");
+              
+     },
+     onend: () => {
+     setCmvAction("Thanks 4 Listening")
+     },
+     onresume: () => {
+     setCmvAction("Resumed")
+     },
+     onpause: () => {
+     setCmvAction("Paused...");
+     },
+          
+     onboundary: (event) => {
+    
+     }
+     }
+     })
+     .then((data) => {   
+     })
+     .catch((e) => {
+     setCmvErrorsx("An error occurred :", e)
+     });speech.resume();
+     }
+	 */
+	 
+
+
+
+
+
+useEffect(()=>{
+const playEachCoinMsg = ()=>{
+  hideCmvErrorsx();
+  speech.cancel();
+
+  setFinalComp('')
+ 
+  const playEachCoinInfo = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.toLocaleLowerCase()}&ids=${playCoinInfo}
+  &order=market_cap_desc&per_page=250&page=1&sparkline=false`
+  axios.get(playEachCoinInfo).then((res)=>{setCoinArr(res.data)}).catch((err)=>{showCmvErrorsx('Unsuported currency')})
+  }
+  
+ //playEachCoinMsg();
+  
+ 	
+
+ //setQuickData(false)
+},[playCoinInfo,paused])
+
 useEffect(()=>{
   hideCmvErrorsx()
 
     if(timeInterval.current.value !== '' && timeInterval.current.value > 0 && buy.length > 0 && quickData){
     const cryptoUrlQuick = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.toLocaleLowerCase()}&ids=${buy.toString()}
     &order=market_cap_desc&per_page=250&page=1&sparkline=false`
-    axios.get(cryptoUrlQuick).then((res)=>{setCoinArr(res.data)}).then(()=>{}).catch((err)=>{showCmvErrorsx('Unsuported currency')})
+    axios.get(cryptoUrlQuick).then((res)=>{setCoinArr(res.data)}).catch((err)=>{showCmvErrorsx('Unsuported currency')})
     }
 
  setQuickData(false)
 },[quickData])
 
 
-
-
-
-
 var realTimeUpdate = updateInterval * 60000
 
 const recompArr = []
 
-
-	
 useEffect(()=>{
 const cryptoUrl = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.toLocaleLowerCase()}&ids=${buy.toString()}
 &order=market_cap_desc&per_page=250&page=1&sparkline=false`
 
 hideCmvErrorsx()
 const getLatestCoinInfo = setInterval(()=>{
-if(runOrStop && timeInterval.current.value !== '' && timeInterval.current.value > 0 && buy.length > 0 ){
-var date = new Date()
-var teeest = date.getMinutes()
- 
-axios.get(cryptoUrl).then((res)=>{setCoinArr(res.data)}).then().catch((err)=>{ showCmvErrorsx('No internet connection')})
-   
+if(runOrStop && paused && timeInterval.current.value !== '' && timeInterval.current.value > 0 && buy.length > 0 ){
+
+axios.get(cryptoUrl).then((res)=>{setCoinArr(res.data)}).then().catch((err)=>{ showCmvErrorsx('No internet connection')}) 
   }
   else{
   const endUpdate = clearInterval(getLatestCoinInfo)
@@ -128,6 +184,7 @@ axios.get(cryptoUrl).then((res)=>{setCoinArr(res.data)}).then().catch((err)=>{ s
   },realTimeUpdate)
   return ()=> clearInterval(getLatestCoinInfo)
 },[timeInterval.current,buy,counta,runOrStop])
+
 
   const currencyInfo = {
   style:"currency",
@@ -140,7 +197,7 @@ axios.get(cryptoUrl).then((res)=>{setCoinArr(res.data)}).then().catch((err)=>{ s
     let allNews  =  coinArr.map((news)=>{ 
       let priceFlow = Math.floor(news.current_price) > 1 ?  currencyPlural : currencySingular;
       let fixPricePrecision = news.current_price >= 1 ? news.current_price.toLocaleString() : news.current_price;
-      var composeInfo = news.name + ' is trading @ ' + fixPricePrecision  + ' ' + priceFlow +', with a price change of '+ news.price_change_percentage_24h.toFixed(1) + '%'
+      var composeInfo = news.name + ' is trading @ ' + fixPricePrecision  + ' ' + priceFlow +', with a price change of '+ Number(news.price_change_percentage_24h).toFixed(1) + '%'
       var recomp = composeInfo.replace(/\./g,' point ')
       recompArr.push(recomp +' ' + ' ' + ' ' + ' '+ ' ')
     })
@@ -148,12 +205,19 @@ axios.get(cryptoUrl).then((res)=>{setCoinArr(res.data)}).then().catch((err)=>{ s
     isPlaying && vCoin() 
     }
     useEffect(()=>{
-        composeMsg()
-        },[coinArr,replay,isPlaying])
+    composeMsg()
+
+    },[coinArr,replay])
+	
+	// I removed is playing from the dependency
+	
+  //console.log(paused)
 		
 		
   const clearTime = ()=>{
   }
+  
+  //console.log(finalComp)
 
 if(typeof window !== 'undefined'){
     var speech = new Speech() // will throw an exception if not browser supported
@@ -171,8 +235,8 @@ if(typeof window !== 'undefined'){
       listeners: {
       onvoiceschanged: (voices) => {
 
-        }
-      }
+     }
+     }
     })
     .then((data) => {
       
@@ -180,60 +244,8 @@ if(typeof window !== 'undefined'){
     .catch((e) => {
     setCmvErrorsx("An error occurred :", e)
     });
-
-
-  }
+    }
    
-
-
-
-  function vCoin() {
-    
-    hideCmvErrorsx();
-   
-   setIsPlaying(true);
-   setRunOrStop(true);
-
-     speech.speak({
-     text: finalComp.toString(),
-     queue: true,
-     listeners: {
-     onstart: () => {
-     setCmvAction("Playing...");
-              
-     },
-     onend: () => {
-     setCmvAction("Thanks 4 Listening")
-     },
-     onresume: () => {
-     setCmvAction("Resumed")
-     },
-     onpause: () => {
-     setCmvAction("Paused...");
-     },
-          
-     onboundary: (event) => {
-     /*
-     console.log(
-     event.name +
-     " boundary reached after " +
-     event.elapsedTime +
-     " milliseconds."
-     );
-     */
-     }
-     }
-     })
-     .then((data) => {   
-     })
-     .catch((e) => {
-     setCmvErrorsx("An error occurred :", e)
-     });speech.resume();
-     }
-
-
-
-
 
     const fixCurrency = (currency)=>{
     setCurrency(currency)
@@ -267,9 +279,8 @@ if(typeof window !== 'undefined'){
      !runOrStop? setRunOrStop(true) : '';
      }
 
-  //;  index === 0 && vCoin(); index === 1 && pause(); index === 2 && stop() 
 
-const buttonStyle = [{},{marginLeft:'5%',marginRight:'5%'},{}]
+const buttonStyle = [{lineHeight:'90%'},{marginLeft:'5%',marginRight:'5%',lineHeight:'90%'},{lineHeight:'90%'}]
     
 return(
 <>
@@ -279,13 +290,10 @@ return(
 <div className={styles.CMVControls_main1}>
 <div className={styles.CMVControls_main1_playPause}>
 <div className={styles.CMVControls_main1_btns}> 
-
-
-
 {
 controlIcons.map((icon,index)=>{
 const Iconf = icon;
-return <Iconf key = {icon+index}   id = {colorContBtns === index ?  styles.secondCbtnColor : styles.firstCbtnColor} onMouseDown = {(c)=>{changeControlBtnColor(index);  index === 0 && vCoin(); index === 1 && pause(); index === 2 && stop() }}   style = {buttonStyle[index]} />
+return <span style = {buttonStyle[index]} key = {icon+index} ><Iconf  style = {{verticalAlign:'top'}}  id = {colorContBtns === index ?  styles.secondCbtnColor : styles.firstCbtnColor} onMouseDown = {(c)=>{changeControlBtnColor(index);  index === 0 && vCoin(); index === 1 && pause(); index === 2 && stop() }} /></span>
 })
 } 
 
