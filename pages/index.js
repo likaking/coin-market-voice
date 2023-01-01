@@ -211,7 +211,7 @@ detectSpeech()
   setCoinArr={setCoinArr} playCoinInfo={playCoinInfo} setPlayCoinInfo={setPlayCoinInfo} paused={paused} setPaused={setPaused} setFinalComp={setFinalComp}
   finalComp={finalComp} currency={currency} setCurrency={setCurrency} cmvErrorsx={cmvErrorsx} setCmvErrorsx={setCmvErrorsx}
   currencyPlural={currencyPlural} setCurrencyPlural={setCurrencyPlural} currencySingular={currencySingular} setCurrencySingular={setCurrencySingular}
-  cmvAction={cmvAction} setCmvAction={setCmvAction} cmvErrorsx={cmvErrorsx} setCmvErrorsx={setCmvErrorsx}  />
+  cmvAction={cmvAction} setCmvAction={setCmvAction}  />
 
   <CMVControls currencryMap={currencryMap} coinArr={coinArr} activeCoins={activeCoins} finalComp={finalComp}
    setFinalComp={setFinalComp} setCoinArr={setCoinArr} currency={currency} setCurrency={setCurrency}
