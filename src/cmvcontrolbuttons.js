@@ -1,5 +1,5 @@
 import React, {Suspense, useState,useEffect,useRef} from 'react';
-import {FaBars,FaPlay,FaPause,FaPlayCircle,FaRegPlayCircle,FaRegPauseCircle} from 'react-icons/fa'
+import {FaBars,FaPlay,FaPause,FaPlayCircle,FaRegPlayCircle,FaRegPauseCircle,FaRegStopCircle} from 'react-icons/fa'
 import {BsFillPlayFill,BsPlayCircleFill,BsPauseCircleFill} from 'react-icons/bs'
 import {ImCancelCircle} from 'react-icons/im'
 import {FontAwesome} from 'react-icons/fa'
@@ -7,21 +7,19 @@ import axios from 'axios'
 import styles from '../styles/CMVControls.module.css'
 import Speech from 'speak-tts'
 import {Currencies} from '../src/currencies.js'
-import {Voicecoin,pause,stop} from '../src/speechFunc.js'
+import {Voicecoin,pause,stop,voice} from '../src/speechFunc.js'
 
 
 
-const controlIcons = [FaRegPlayCircle,FaRegPauseCircle,ImCancelCircle]
+const controlIcons = [FaRegPlayCircle,FaRegStopCircle]
 
-export function CMVControls({currencryMap,coinArr,activeCoins,finalComp,setFinalComp,setCoinArr,currency, setCurrency,buy,quickData,setQuickData,
-runOrStop,setRunOrStop,currencySingular,currencyPlural,playCoinInfo,setPlayCoinInfo,paused,setPaused}){
-	
+export function CMVControls({currencryMap,coinArr,activeCoins,finalComp,setFinalComp,setCoinArr,currency,setCurrency,buy,quickData,setQuickData,
+runOrStop,setRunOrStop,currencySingular,currencyPlural,playCoinInfo,setPlayCoinInfo,paused,setPaused,cmvErrorsx,setCmvErrorsx,cmvAction,setCmvAction}){
+
 
 const [updateInterval,setUpdateInterval] = useState(1) 
 const [minutes,setMinutes] = useState('Minute')
 const [colorContBtns,setColorContBtns] = useState()
-const [cmvAction,setCmvAction] = useState()
-const [cmvErrorsx,setCmvErrorsx] = useState('Please add a crypto asset')
 const [currentLang,setCurrentLang] = useState('en-US')
 const [currentVoice, setCurrentVoice] = useState('Microsoft David - English (United States)')
 const [replay, setReplay] = useState(true)
@@ -130,24 +128,7 @@ const hideCmvErrorsx = ()=>{
 
 
 
-useEffect(()=>{
-const playEachCoinMsg = ()=>{
-  hideCmvErrorsx();
-  speech.cancel();
 
-  setFinalComp('')
- 
-  const playEachCoinInfo = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.toLocaleLowerCase()}&ids=${playCoinInfo}
-  &order=market_cap_desc&per_page=250&page=1&sparkline=false`
-  axios.get(playEachCoinInfo).then((res)=>{setCoinArr(res.data)}).catch((err)=>{showCmvErrorsx('Unsuported currency')})
-  }
-  
- //playEachCoinMsg();
-  
- 	
-
- //setQuickData(false)
-},[playCoinInfo,paused])
 
 useEffect(()=>{
   hideCmvErrorsx()
@@ -172,51 +153,47 @@ const cryptoUrl = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${
 
 hideCmvErrorsx()
 const getLatestCoinInfo = setInterval(()=>{
-if(runOrStop && paused && timeInterval.current.value !== '' && timeInterval.current.value > 0 && buy.length > 0 ){
+if(runOrStop && !paused && timeInterval.current.value !== '' && timeInterval.current.value > 0 && buy.length > 0 ){
 
 axios.get(cryptoUrl).then((res)=>{setCoinArr(res.data)}).then().catch((err)=>{ showCmvErrorsx('No internet connection')}) 
-  }
-  else{
-  const endUpdate = clearInterval(getLatestCoinInfo)
-  showCmvErrorsx('Updates are on hold, press play');
-  }
-  },realTimeUpdate)
-  return ()=> clearInterval(getLatestCoinInfo)
+}
+else{
+const endUpdate = clearInterval(getLatestCoinInfo)
+showCmvErrorsx('Updates are on hold, press play');
+}
+},realTimeUpdate)
+return ()=> clearInterval(getLatestCoinInfo)
 },[timeInterval.current,buy,counta,runOrStop])
 
 
-  const currencyInfo = {
-  style:"currency",
-  currency:currency.toUpperCase()
-  }
+const currencyInfo = {
+style:"currency",
+currency:currency.toUpperCase()
+}
 
-  const composeMsg = ()=>{
-    var date = new Date()
-    //var teeest =  date.getHours()  + ' : ' + date.getMinutes()
-    let allNews  =  coinArr.map((news)=>{ 
-      let priceFlow = Math.floor(news.current_price) > 1 ?  currencyPlural : currencySingular;
-      let fixPricePrecision = news.current_price >= 1 ? news.current_price.toLocaleString() : news.current_price;
-      var composeInfo = news.name + ' is trading @ ' + fixPricePrecision  + ' ' + priceFlow +', with a price change of '+ Number(news.price_change_percentage_24h).toFixed(1) + '%'
-      var recomp = composeInfo.replace(/\./g,' point ')
-      recompArr.push(recomp +' ' + ' ' + ' ' + ' '+ ' ')
-    })
-    setFinalComp(recompArr.toString()); 
-   // isPlaying && vCoin() 
-    }
-    useEffect(()=>{
-    composeMsg()
-
-    },[coinArr,replay])
+const composeMsg = ()=>{
+var date = new Date()
+//var teeest =  date.getHours()  + ' : ' + date.getMinutes()
+let allNews  =  coinArr.map((news)=>{ 
+let priceFlow = Math.floor(news.current_price) > 1 ?  currencyPlural : currencySingular;
+let fixPricePrecision = news.current_price >= 1 ? news.current_price.toLocaleString() : news.current_price;
+var composeInfo = news.name + ' is trading @ ' + fixPricePrecision  + ' ' + priceFlow +', with a price change of '+ Number(news.price_change_percentage_24h).toFixed(1) + '%'
+var recomp = composeInfo.replace(/\./g,' point ')
+recompArr.push(recomp +' ' + ' ' + ' ' + ' '+ ' ')
+})
+setFinalComp(recompArr.toString()); 
+// isPlaying && vCoin() 
+}
+useEffect(()=>{
+composeMsg()
+},[coinArr,replay])
 	
 	// I removed is playing from the dependency
 	
   //console.log(paused)
 		
-		
-  const clearTime = ()=>{
-  }
   
-  //console.log(finalComp)
+
 /*
 if(typeof window !== 'undefined'){
     var speech = new Speech() // will throw an exception if not browser supported
@@ -260,31 +237,41 @@ if(typeof window !== 'undefined'){
     const updateNewTime = useEffect((t)=>{
     
     },[updateInterval])
-    /*
-    const pause = ()=>{
+	
+	 const playAll = ()=>{
+	  hideCmvErrorsx();
+	  Voicecoin(finalComp,setCmvAction=setCmvAction,setCmvErrorsx=setCmvErrorsx);
+	  setPaused(true);
+	  setIsPlaying(true);
+      setRunOrStop(true);
+    }
+    
+    const pausePlay = ()=>{
+	  pause();
       setRunOrStop(false);
-      speech.pause();
       setIsPlaying(false)
     }
-	*/
-   /*
-    const stop = ()=>{
-      speech.cancel();
+	
+    const cancel = ()=>{
+      stop();
       setIsPlaying(false)
-      //setRunOrStop(false);
+      setRunOrStop(false);
       setQuickData(true);
     }
-	*/
-  
+	
     const startSpeaking = ()=>{
      !runOrStop? setRunOrStop(true) : '';
      }
 
 
 const buttonStyle = [{lineHeight:'90%'},{marginLeft:'5%',marginRight:'5%',lineHeight:'90%'},{lineHeight:'90%'}]
+
+
+
     
 return(
 <>
+
 
 <div className={styles.CMVControls}>
 <div className={styles.CMVControls_main}>
@@ -295,7 +282,7 @@ return(
 {
 controlIcons.map((icon,index)=>{
 const Iconf = icon;
-return <span style = {buttonStyle[index]} key = {icon+index} ><Iconf  style = {{verticalAlign:'top'}}  id = {colorContBtns === index ?  styles.secondCbtnColor : styles.firstCbtnColor} onMouseDown = {(c)=>{changeControlBtnColor(index);  index === 0 && Voicecoin(finalComp); index === 1 && pause(); index === 2 && stop() }} /></span>
+return <span style = {buttonStyle[index]} key = {icon+index} ><Iconf  style = {{verticalAlign:'top'}}  id = {colorContBtns === index ?  styles.secondCbtnColor : styles.firstCbtnColor} onMouseDown = {(c)=>{changeControlBtnColor(index);  index === 0 &&  playAll() ; index === 1 && cancel() }} /></span>
 })
 } 
 

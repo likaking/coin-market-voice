@@ -1,11 +1,14 @@
 import Speech from 'speak-tts'
 
+
+
 if(typeof window !== 'undefined'){
 var speech = new Speech() // will throw an exception if not browser supported
 if(speech.hasBrowserSupport()) { // returns a boolean
 //console.log("speech synthesis supported")
 }
-	
+
+
 speech.init({
 volume: 1,
 // lang: currentLang,
@@ -25,9 +28,9 @@ setCmvErrorsx("An error occurred :", e)
 });
 }
    
-   
-export function Voicecoin(compMsg) {
-	  console.log('running speech function')
+  
+export function Voicecoin(compMsg,setCmvAction,setCmvErrorsx) {
+	
     
 //  hideCmvErrorsx();
    
@@ -39,17 +42,18 @@ text: compMsg,
 queue: false,
 listeners: {
 onstart: () => {
-//  setCmvAction("Playing...");
-              
+
+setCmvAction("Playing...");
+            
 },
 onend: () => {
-//  setCmvAction("Thanks 4 Listening")
+setCmvAction("The end!")
 },
 onresume: () => {
-//  setCmvAction("Resumed")
+//setCmvAction("Resumed")
 },
 onpause: () => {
-//  setCmvAction("Paused...");
+//setCmvAction("Paused...");
 },
           
 onboundary: (event) => {
@@ -67,19 +71,15 @@ event.elapsedTime +
 .then((data) => {   
 })
 .catch((e) => {
-   //  setCmvErrorsx("An error occurred :", e)
-});speech.resume();
+setCmvErrorsx("An error occurred :", e)
+});
+speech.resume();
 }
 
 export const pause = ()=>{
-//setRunOrStop(false);
 speech.pause();
-//setIsPlaying(false)
 }
 	
 export const stop = ()=>{
 speech.cancel();
-//setIsPlaying(false)
-//setRunOrStop(false);
-//setQuickData(true);
 }
