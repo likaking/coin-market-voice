@@ -132,6 +132,7 @@ pauseIcon.current[num].style.display = 'none'
 playIcon.current[num].style.display = 'block'	
 stop()	
 setPlayCoinInfo('');
+setFinalInfoComp([])
 }
 
 const MouseEntaEvents = (i,coinId,e)=>{

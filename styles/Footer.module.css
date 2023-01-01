@@ -4,8 +4,8 @@
     width: 100%;
     padding-top: 5vw;
     margin-top: 0vw;
-    background-color: rgb(56, 124, 151);
-    background-image: -webkit-linear-gradient(rgb(68, 139, 167),rgba(57, 175, 169, 0.801));
+    background-color: rgb(86, 231, 241);
+    background-image: -webkit-radial-gradient(rgb(86, 231, 241),rgba(63, 194, 187, 0.801));
     position: relative;
 }
 .footer_logo{
@@ -313,7 +313,6 @@ transition: 0.4s;
          
      }
      .footer_Social >ul>li :hover{
-        color: rgb(235, 117, 21);
         transition: 0.4s;
         
     }
@@ -475,7 +474,6 @@ transition: 0.4s;
              
          }
          .footer_Social >ul>li :hover{
-            color: rgb(235, 117, 21);
             transition: 0.4s;
             
         }
