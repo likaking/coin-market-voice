@@ -37,9 +37,7 @@ text: compMsg,
 queue: false,
 listeners: {
 onstart: () => {
-
-setCmvAction("Playing...");
-            
+setCmvAction("Playing...");            
 },
 onend: () => {
 setCmvAction("The end!")
@@ -52,8 +50,7 @@ onresume: () => {
 },
 onpause: () => {
 //setCmvAction("Paused...");
-},
-          
+},         
 onboundary: (event) => {
 /*
 console.log(

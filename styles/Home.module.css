@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Audiowide");
-@import url("https://fonts.googleapis.com/css?family=Amaranth");
-@import url("https://fonts.googleapis.com/css?family=Allerta Stencil");
+
 
 .cmvBody {
   padding-top: 1.8rem;
@@ -71,12 +69,8 @@
   background-color: rgb(29, 124, 124);
   left: -17%;
   top: -10%;
-  box-shadow: 0 3px 15px 0 rgba(180, 180, 180, 0.2),
-    0 2px 10px 0 rgba(177, 177, 177, 0.19);
-  background-image: -webkit-linear-gradient(
-    rgb(23, 143, 143),
-    rgb(29, 86, 124)
-  );
+  box-shadow: 0 3px 15px 0 rgba(180, 180, 180, 0.2),0 2px 10px 0 rgba(177, 177, 177, 0.19);
+  background-image: -webkit-linear-gradient(rgb(23, 143, 143),rgb(29, 86, 124));
   z-index: 1;
   overflow: hidden;
   display: none;
@@ -91,7 +85,6 @@
   margin-top: 10%;
   font-size: 2vw;
   text-shadow: 1px 1px rgba(73, 112, 128, 0.137);
-  font-family: Allerta Stencil;
 }
 
 .banner_div_L_hdr2 {
@@ -101,13 +94,11 @@
   padding: 0;
   margin: 0;
   text-shadow: 1px 1px rgba(133, 144, 148, 0.205);
-  font-family: Audiowide;
 }
 
 .banner_div_L_subhdr {
   color: rgb(239, 254, 255);
   text-shadow: 1px 1px rgba(149, 154, 156, 0.137);
-  font-family: Allerta Stencil;
 }
 
 .banner_div_L_P {
@@ -120,7 +111,6 @@
   line-height: 80%;
   margin-top: 10%;
   text-shadow: 1px 1px rgba(73, 112, 128, 0.137);
-  font-family: Audiowide;
   display: none;
 }
 
@@ -131,7 +121,6 @@
   padding: 0;
   margin: 0;
   text-shadow: 1px 1px rgba(133, 144, 148, 0.205);
-  font-family: Audiowide;
   display: none;
 }
 
@@ -593,7 +582,6 @@
   margin-top: 10%;
   font-size: 6vw;
   text-shadow: 1px 1px rgba(73, 112, 128, 0.137);
-  font-family: Allerta Stencil;
   padding-left:2vw;
   display: block;
 }
@@ -606,7 +594,6 @@
   margin: 0;
   padding-left:2vw;
   text-shadow: 1px 1px rgba(133, 144, 148, 0.205);
-  font-family: Audiowide;
   display: block;
 }
 

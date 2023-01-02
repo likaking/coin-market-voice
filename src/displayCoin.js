@@ -87,7 +87,7 @@ axios.get(playEachCoinInfo).then((res)=>{setCoinInfoArr(res.data)}).catch((err)=
   
 paused && playCoinInfo !== '' && playEachCoinMsg();
  
-},[playCoinInfo,currentTime])
+},[playCoinInfo])
 
 const recompInfoArr = []
 
@@ -111,6 +111,7 @@ composeMsg()
 
 useEffect(()=>{
 Voicecoin(finalInfoComp,setCmvAction=setCmvAction,setCmvErrorsx=setCmvErrorsx,currentIndex.current,playIcon,stopIcon,null)
+setPlayCoinInfo('')
 },[finalInfoComp])
 
 
