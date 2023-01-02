@@ -20,7 +20,7 @@
   margin-bottom: 15vh;
   display: flex;
   border-bottom: 0px solid rgba(130, 157, 165, 0.24);
-      background-image: url('/modelF.png');
+  background-image: url('/modelF.png');
   background-repeat: no-repeat;
   background-position: 25%;
   overflow: hidden;
@@ -636,7 +636,6 @@
     padding-right: 0rem;
     height: 23em;
     background-position: 70%;
-    background-image: url("../public/modelF.png");
     background-size: cover;
   }
 
