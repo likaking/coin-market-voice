@@ -23,6 +23,7 @@ const [play,setPlay] = useState(false)
 const [coinInfoArr,setCoinInfoArr] = useState([])
 const [finalInfoComp,setFinalInfoComp] = useState([])
 const [playCounter,setPlayCounter] = useState(0)
+const [currentTime,setCurrentTime] = useState('')
 
 
 
@@ -86,7 +87,7 @@ axios.get(playEachCoinInfo).then((res)=>{setCoinInfoArr(res.data)}).catch((err)=
   
 paused && playCoinInfo !== '' && playEachCoinMsg();
  
-},[playCoinInfo])
+},[playCoinInfo,currentTime])
 
 const recompInfoArr = []
 
@@ -101,7 +102,7 @@ var recomp = composeInfo.replace(/\./g,' point ')
 recompInfoArr.push(recomp +' ' + ' ' + ' ' + ' '+ ' ')
 })
 setFinalInfoComp(recompInfoArr.toString()); 
-//setFinalInfoComp('')
+
 }
 
 useEffect(()=>{
@@ -126,6 +127,7 @@ setPaused(true)
 const addCoinId = (coinId)=>{
 setPlayCoinInfo(coinId);
 setCmvErrorsx('')
+setCurrentTime(Date.now)
 }
 
 const stopVoice = (num,coinId)=>{
