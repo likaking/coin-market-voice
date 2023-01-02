@@ -81,7 +81,7 @@ useEffect(()=>{
 const playEachCoinMsg = ()=>{
 const playEachCoinInfo = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.toLocaleLowerCase()}&ids=${playCoinInfo}
 &order=market_cap_desc&per_page=250&page=1&sparkline=false`
-axios.get(playEachCoinInfo).then((res)=>{setCoinInfoArr(res.data);console.log(res.data)}).catch((err)=>{setCmvErrorsx("can't get coin info")})
+axios.get(playEachCoinInfo).then((res)=>{setCoinInfoArr(res.data)}).catch((err)=>{setCmvErrorsx("can't get coin info")})
 }
   
 paused && playCoinInfo !== '' && playEachCoinMsg();
@@ -102,9 +102,8 @@ var recomp = composeInfo.replace(/\./g,' point ')
 recompInfoArr.push(recomp +' ' + ' ' + ' ' + ' '+ ' ')
 })
 setFinalInfoComp(recompInfoArr.toString()); 
-
 }
-
+console.log(finalInfoComp)
 useEffect(()=>{
 composeMsg()
 },[coinInfoArr])

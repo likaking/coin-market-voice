@@ -63,8 +63,8 @@ export default function Home() {
   
   const toWords = new ToWords();
   const [currency, setCurrency] = useState('USD')
-  const [currencyPlural,setCurrencyPlural] = useState('US dollars')
-  const [currencySingular,setCurrencySingular] = useState('US dollar')
+  const [currencyPlural,setCurrencyPlural] = useState('U-S dollars')
+  const [currencySingular,setCurrencySingular] = useState('U-S dollar')
   const [finalComp, setFinalComp] = useState(['Hi I am Kennedy'])   
   const [coinArr, setCoinArr] = useState([])
   const [info, setInfo] = useState(true)
