@@ -83,8 +83,7 @@ const playEachCoinMsg = ()=>{
 const playEachCoinInfo = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.toLocaleLowerCase()}&ids=${playCoinInfo}
 &order=market_cap_desc&per_page=250&page=1&sparkline=false`
 axios.get(playEachCoinInfo).then((res)=>{setCoinInfoArr(res.data)}).catch((err)=>{setCmvErrorsx("can't get coin info")})
-}
-  
+}  
 paused && playCoinInfo !== '' && playEachCoinMsg();
  
 },[playCoinInfo])
@@ -102,22 +101,26 @@ var recomp = composeInfo.replace(/\./g,' point ')
 recompInfoArr.push(recomp +' ' + ' ' + ' ' + ' '+ ' ')
 })
 setFinalInfoComp(recompInfoArr.toString()); 
+setCurrentTime(Date.now)
 
 }
 
 useEffect(()=>{
 composeMsg()
+console.log('coinInfoArr')
 },[coinInfoArr])
 
 useEffect(()=>{
 Voicecoin(finalInfoComp,setCmvAction=setCmvAction,setCmvErrorsx=setCmvErrorsx,currentIndex.current,playIcon,stopIcon,null)
 setPlayCoinInfo('')
-},[finalInfoComp])
+console.log('finalInfoComp')
+},[finalInfoComp,currentTime])
 
 
 
 const playVoice = (num,coinId)=>{
-stop()
+//stop()
+
 addCoinId(coinId)
 playIcon.current[num].style.display = 'none'		
 stopIcon.current[num].style.display = 'block'
@@ -128,15 +131,17 @@ setPaused(true)
 const addCoinId = (coinId)=>{
 setPlayCoinInfo(coinId);
 setCmvErrorsx('')
-setCurrentTime(Date.now)
+
 }
 
+//console.log(currentTime)
 const stopVoice = (num,coinId)=>{
 stopIcon.current[num].style.display = 'none'	
 playIcon.current[num].style.display = 'block'	
 stop()	
 setPlayCoinInfo('');
 setFinalInfoComp([])
+setCoinArr([])
 }
 
 const MouseEntaEvents = (i,coinId,e)=>{
@@ -147,8 +152,8 @@ deleteIcon.current[i].style.display = 'block';
 
 const MouseLeaveEvents = (i)=>{
 deleteIcon.current[i].style.display = 'none';
-playIcon.current[i].style.display = 'block';
-stopIcon.current[i].style.display = 'none';
+//playIcon.current[i].style.display = 'block';
+//stopIcon.current[i].style.display = 'none';
 }
 
 return(
