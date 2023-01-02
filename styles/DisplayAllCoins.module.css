@@ -296,7 +296,6 @@
     top: 50%;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-	border:1px solid red
   }
   .displayCoin_playNpause {
     display: flex;
@@ -304,6 +303,5 @@
     position: relative;
     width: 25%;
     height: auto;
-	border:1px solid red
   }
 }
