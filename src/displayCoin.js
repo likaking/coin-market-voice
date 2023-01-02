@@ -96,7 +96,7 @@ const composeMsg = async()=>{
  
 let allNews  =  await coinInfoArr.map((news)=>{ 
 let priceFlow = Math.floor(news.current_price) > 1 ?  currencyPlural : currencySingular;
-let fixPricePrecision = news.current_price >= 1 ? news.current_price.toLocaleString() : news.current_price;
+let fixPricePrecision = news.current_price >= 1 ? news.current_price.toLocaleString() : news.current_price < 0.1 ? news.current_price : news.current_price.toFixed(2);
 var composeInfo = news.name + ' is trading @ ' + fixPricePrecision  + ' ' + priceFlow +', with a price change of '+ Number(news.price_change_percentage_24h).toFixed(1) + '%'
 var recomp = composeInfo.replace(/\./g,' point ')
 recompInfoArr.push(recomp +' ' + ' ' + ' ' + ' '+ ' ')
@@ -105,7 +105,6 @@ setFinalInfoComp(recompInfoArr.toString());
 
 }
 
-console.log(currentIndex.current)
 useEffect(()=>{
 composeMsg()
 },[coinInfoArr])
@@ -127,6 +126,7 @@ setPaused(true)
 
 const addCoinId = (coinId)=>{
 setPlayCoinInfo(coinId);
+setCmvErrorsx('')
 }
 
 const stopVoice = (num,coinId)=>{

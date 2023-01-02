@@ -1,315 +1,309 @@
-.displayCoin{
-width: 80%;
-padding-top: 1rem;
-margin: auto;
+.displayCoin {
+  width: 80%;
+  padding-top: 1rem;
+  margin: auto;
 }
-.displayCoin_main{
-height: 12.2em;
-width: 60%;
-margin: auto;
-overflow: auto;
-resize: vertical;
-border: 1px solid rgb(86, 231, 241);
+.displayCoin_main {
+  height: 12.2em;
+  width: 60%;
+  margin: auto;
+  overflow: auto;
+  resize: vertical;
+  border: 1px solid rgb(86, 231, 241);
 }
-.displayCoin_screen{
-display: flex;
-justify-content: flex-start;
-gap:4%;
-width: 100%;
-flex-direction: row;
-height: auto;
-word-break: break-all;
-overflow-x: hidden;
-padding: 0.5em;
-margin: auto;
-flex-wrap: wrap;
-}
-
-.displayCoin_container{
-display: flex;
-width: 22%;
-height: 3rem;
-align-items: center;
-border: 1px solid rgba(86, 231, 241, 0.226);
-padding: 0.3rem;
-overflow: hidden;
-word-break: break-all;
-position: relative;
-box-shadow: 0px 5px 16px -8px rgba(82, 102, 100, 0.1);
-margin-bottom: 1rem;
+.displayCoin_screen {
+  display: flex;
+  justify-content: flex-start;
+  gap: 4%;
+  width: 100%;
+  flex-direction: row;
+  height: auto;
+  word-break: break-all;
+  overflow-x: hidden;
+  padding: 0.5em;
+  margin: auto;
+  flex-wrap: wrap;
 }
 
-.displayCoin_img{
-width: auto;
-height: 80%;
-padding-right:0.5rem;
-}
-.displayCoin_name{
-font-weight: 600;
-color: rgb(91, 212, 196);
-}
-.displayCoin_delete{
-position: absolute;
-align-items: center;
-width: 100%;
-height: 100%;
-top: 0;
-left: 0;
-text-align: right;
-padding-right: 4%;
-background-color: rgba(241, 241, 241, 0.534);
-transition: 2s;
-transition-timing-function: ease-in-out;
-transition-delay: 1s;
-display: none;
-}
-.displayCoin_deleteIcon{
-color: rgb(91, 212, 196);
-}
-.displayCoin_playNdelete{
-display:flex;
-justify-content:flex-end;
-width:100%;
-height:85%;
-padding:0.3rem;
-margin: 0;
-position: absolute;
-top: 50%;
--ms-transform: translateY(-50%);
-transform: translateY(-50%);
-}
-.displayCoin_playNpause{
-display:flex;
-color: rgb(91, 212, 196);
-font-size:2rem;	
-position:relative;
-width:25%;
-height:auto;
-}
-.displayCoin_deleteIcon_container{
-display:flex;
-justify-content:center;
-align-items:center;
-margin-left:2rem;
-}
-.displayCoin_playIcon{
-position: absolute;	
-top:-10%;
-line-height:80%;
-}
-.displayCoin_stopIcon{
-position: absolute;	
-top:-10%;
-line-height:80%;
+.displayCoin_container {
+  display: flex;
+  width: 22%;
+  height: 3rem;
+  align-items: center;
+  border: 1px solid rgba(86, 231, 241, 0.226);
+  padding: 0.3rem;
+  overflow: hidden;
+  word-break: break-all;
+  position: relative;
+  box-shadow: 0px 5px 16px -8px rgba(82, 102, 100, 0.1);
+  margin-bottom: 1rem;
 }
 
+.displayCoin_img {
+  width: auto;
+  height: 80%;
+  padding-right: 0.5rem;
+}
+.displayCoin_name {
+  font-weight: 600;
+  color: rgb(91, 212, 196);
+}
+.displayCoin_delete {
+  position: absolute;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-align: right;
+  padding-right: 4%;
+  background-color: rgba(241, 241, 241, 0.534);
+  transition: 2s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 1s;
+  display: none;
+}
+.displayCoin_deleteIcon {
+  color: rgb(91, 212, 196);
+}
+.displayCoin_playNdelete {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 85%;
+  padding: 0.3rem;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.displayCoin_playNpause {
+  display: flex;
+  color: rgb(91, 212, 196);
+  font-size: 2rem;
+  position: relative;
+  width: 25%;
+  height: auto;
+}
+.displayCoin_deleteIcon_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2rem;
+}
+.displayCoin_playIcon {
+  position: absolute;
+  top: -10%;
+  line-height: 80%;
+}
+.displayCoin_stopIcon {
+  position: absolute;
+  top: -10%;
+  line-height: 80%;
+}
 
 /* width */
 .displayCoin_main::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  /* Track */
-  .displayCoin_main::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-  }
-   
-  /* Handle */
-  .displayCoin_main::-webkit-scrollbar-thumb {
-    background: rgba(94, 129, 139, 0.836); 
-  }
-  
-  /* Handle on hover */
-  .displayCoin_main::-webkit-scrollbar-thumb:hover {
-    background: rgb(94, 129, 139); 
-  }
+  width: 10px;
+}
 
+/* Track */
+.displayCoin_main::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
 
+/* Handle */
+.displayCoin_main::-webkit-scrollbar-thumb {
+  background: rgba(94, 129, 139, 0.836);
+}
+
+/* Handle on hover */
+.displayCoin_main::-webkit-scrollbar-thumb:hover {
+  background: rgb(94, 129, 139);
+}
 
 @media screen and (max-width: 920px) {
-.displayCoin{
-width: 100%;
-}
-.displayCoin_main{
-height: 14em;
-width: 75%;
-margin: auto;
-overflow: auto;
-resize: vertical;
-}
-.displayCoin_screen{
-display: flex;
-width: 100%;
-flex-direction: row;
-height: auto;
-gap:2.5%;
-word-break: break-all;
-overflow-x: hidden;
-padding: 0.5em;
-margin: auto;
-flex-wrap: wrap;
-}
-.displayCoin_container{
-display: flex;
-width: 23.1%;
-height: 3.5rem;
-align-items: center;
-padding: 0.4rem;
-word-break: break-all;
-position: relative;
-margin-bottom: 1.1rem;
-}  
-.displayCoin_name{
-font-weight: 600;
-font-size: 2.3vw;
-}   
+  .displayCoin {
+    width: 100%;
+  }
+  .displayCoin_main {
+    height: 14em;
+    width: 75%;
+    margin: auto;
+    overflow: auto;
+    resize: vertical;
+  }
+  .displayCoin_screen {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    height: auto;
+    gap: 2.5%;
+    word-break: break-all;
+    overflow-x: hidden;
+    padding: 0.5em;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+  .displayCoin_container {
+    display: flex;
+    width: 23.1%;
+    height: 3.5rem;
+    align-items: center;
+    padding: 0.4rem;
+    word-break: break-all;
+    position: relative;
+    margin-bottom: 1.1rem;
+  }
+  .displayCoin_name {
+    font-weight: 600;
+    font-size: 2.3vw;
+  }
 
-.displayCoin_playNdelete{
-display:flex;
-justify-content:flex-end;
-width:100%;
-height:85%;
-padding:0.3rem;
-margin: 0;
-position: absolute;
-top: 50%;
--ms-transform: translateY(-50%);
-transform: translateY(-50%);
+  .displayCoin_playNdelete {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 85%;
+    padding: 0.3rem;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .displayCoin_playNpause {
+    display: flex;
+    font-size: 5.57vw;
+    position: relative;
+    width: 25%;
+    height: auto;
+  }
 }
-.displayCoin_playNpause{
-display:flex;
-font-size:2.5rem;	
-position:relative;
-width:25%;
-height:auto;
-}
-}
- 
-
 
 @media screen and (max-width: 550px) {
-.displayCoin{
-width: 100%;
-}
-.displayCoin_main{
-height: 25em;
-width: 95%;
-margin: auto;
-overflow: auto;
-resize: vertical;
-}
-.displayCoin_screen{
-display: flex;
-justify-content:space-between;
-width: 100%;
-flex-direction: row;
-height: auto;
-word-break: break-all;
-overflow-x: hidden;
-padding: 0.5em;
-margin: auto;
-flex-wrap: wrap;
-}
-.displayCoin_container{
-display: flex;
-width: 31%;
-height: 4rem;
-align-items: center;
-border: 1px solid rgba(86, 231, 241, 0.226);
-padding: 0.3rem;
-word-break: break-all;
-position: relative;
-}
-.displayCoin_deleteIcon{
-font-size: 4vw;
-}
-.displayCoin_name{
-font-weight: 600;
-font-size: 4vw;
-}  
-.displayCoin_deleteIcon{
-}
-.displayCoin_playNdelete{
-display:flex;
-justify-content:flex-end;
-width:100%;
-height:80%;
-padding:0.3rem;
-margin: 0;
-position: absolute;
-top: 50%;
--ms-transform: translateY(-50%);
-transform: translateY(-50%);
-}
-.displayCoin_playNpause{
-display:flex;
-font-size:2.8rem;	
-position:relative;
-width:25%;
-height:auto;
-}
-}
-        
-@media screen and (max-width: 430px) {
-.displayCoin{
-width: 100%;
-}
-.displayCoin_main{
-height: 25em;
-width: 95%;
-margin: auto;
-overflow: auto;
-resize: vertical;
-}
-.displayCoin_screen{
-display: flex;
-width: 100%;
-flex-direction: row;
-height: auto;
-word-break: break-all;
-overflow-x: hidden;
-padding: 0.5em;
-margin: auto;
-flex-wrap: wrap;   
+  .displayCoin {
+    width: 100%;
+  }
+  .displayCoin_main {
+    height: 25em;
+    width: 95%;
+    margin: auto;
+    overflow: auto;
+    resize: vertical;
+  }
+  .displayCoin_screen {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: row;
+    height: auto;
+    word-break: break-all;
+    overflow-x: hidden;
+    padding: 0.5em;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+  .displayCoin_container {
+    display: flex;
+    width: 31%;
+    height: 4rem;
+    align-items: center;
+    border: 1px solid rgba(86, 231, 241, 0.226);
+    padding: 0.3rem;
+    word-break: break-all;
+    position: relative;
+  }
+  .displayCoin_deleteIcon {
+    font-size: 4vw;
+  }
+  .displayCoin_name {
+    font-weight: 600;
+    font-size: 4vw;
+  }
+  .displayCoin_deleteIcon {
+  }
+  .displayCoin_playNdelete {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 80%;
+    padding: 0.3rem;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .displayCoin_playNpause {
+    display: flex;
+    font-size: 9vw;
+    position: relative;
+    width: 25%;
+    height: auto;
+  }
 }
 
-.displayCoin_container{
-display: flex;
-width: 48%;
-height: 18vw;
-align-items: center;
-padding: 0.4rem;
-word-break: break-all;
-position: relative;
-margin-bottom: 0.8rem;
+@media screen and (max-width: 430px) {
+  .displayCoin {
+    width: 100%;
+  }
+  .displayCoin_main {
+    height: 25em;
+    width: 95%;
+    margin: auto;
+    overflow: auto;
+    resize: vertical;
+  }
+  .displayCoin_screen {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    height: auto;
+    word-break: break-all;
+    overflow-x: hidden;
+    padding: 0.5em;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+
+  .displayCoin_container {
+    display: flex;
+    width: 48%;
+    height: 18vw;
+    align-items: center;
+    padding: 0.4rem;
+    word-break: break-all;
+    position: relative;
+    margin-bottom: 0.8rem;
+  }
+  .displayCoin_deleteIcon {
+    font-size: 6vw;
+  }
+  .displayCoin_name {
+    font-weight: 600;
+    font-size: 5vw;
+  }
+  .displayCoin_playNdelete {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 80%;
+    padding: 0.3rem;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+	border:1px solid red
+  }
+  .displayCoin_playNpause {
+    display: flex;
+    font-size: 13.3vw;
+    position: relative;
+    width: 25%;
+    height: auto;
+	border:1px solid red
+  }
 }
-.displayCoin_deleteIcon{
-font-size: 6vw;
-}
-.displayCoin_name{
-font-weight: 600;
-font-size: 5vw;
-} 
-.displayCoin_playNdelete{
-display:flex;
-justify-content:flex-end;
-width:100%;
-height:80%;
-padding:0.3rem;
-margin: 0;
-position: absolute;
-top: 50%;
--ms-transform: translateY(-50%);
-transform: translateY(-50%);
-}
-.displayCoin_playNpause{
-display:flex;
-font-size:3.5rem;	
-position:relative;
-width:25%;
-height:auto;
-}
-}
-    
-    
-    
