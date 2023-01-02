@@ -101,7 +101,7 @@ var recomp = composeInfo.replace(/\./g,' point ')
 recompInfoArr.push(recomp +' ' + ' ' + ' ' + ' '+ ' ')
 })
 setFinalInfoComp(recompInfoArr.toString()); 
-setFinalInfoComp('')
+//setFinalInfoComp('')
 }
 
 useEffect(()=>{
