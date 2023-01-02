@@ -32,10 +32,11 @@ const [counta, setCounter] = useState(0)
 
 const timeInterval = useRef(null)
 const minutesField = useRef(null)
-const controlButtons= useRef([])
+const controlButtons = useRef([])
 const gooo = useRef(null)
 const stopUdatingInfo = useRef()
 const cmvErrorsxHolder = useRef(null)
+
 
 
 const changeControlBtnColor = (c)=>{
@@ -67,67 +68,17 @@ minutesField.current.style.display = 'block'
 
 const updateTime = (t)=>{
 setUpdateInterval(t.target.value)
-
 }
 
 const showCmvErrorsx = (msg)=>{
-  cmvErrorsxHolder.current.style.display = 'block';
-  setCmvErrorsx(msg)
+cmvErrorsxHolder.current.style.display = 'block';
+setCmvErrorsx(msg)
 }
 
 const hideCmvErrorsx = ()=>{
-  setCmvErrorsx('')
-  cmvErrorsxHolder.current.style.display = 'none';
-  
+setCmvErrorsx('')
+cmvErrorsxHolder.current.style.display = 'none'; 
 }
-
-
-/*
-  function vCoin() {
-	  
-	  console.log('running speech function')
-    
-    hideCmvErrorsx();
-   
-   setIsPlaying(true);
-   setRunOrStop(true);
-
-     speech.speak({
-     text: finalComp.toString(),
-     queue: false,
-     listeners: {
-     onstart: () => {
-     setCmvAction("Playing...");
-              
-     },
-     onend: () => {
-     setCmvAction("Thanks 4 Listening")
-     },
-     onresume: () => {
-     setCmvAction("Resumed")
-     },
-     onpause: () => {
-     setCmvAction("Paused...");
-     },
-          
-     onboundary: (event) => {
-    
-     }
-     }
-     })
-     .then((data) => {   
-     })
-     .catch((e) => {
-     setCmvErrorsx("An error occurred :", e)
-     });speech.resume();
-     }
-	 */
-	 
-
-
-
-
-
 
 
 useEffect(()=>{
@@ -136,7 +87,7 @@ useEffect(()=>{
     if(timeInterval.current.value !== '' && timeInterval.current.value > 0 && buy.length > 0 && quickData){
     const cryptoUrlQuick = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.toLocaleLowerCase()}&ids=${buy.toString()}
     &order=market_cap_desc&per_page=250&page=1&sparkline=false`
-    axios.get(cryptoUrlQuick).then((res)=>{setCoinArr(res.data)}).catch((err)=>{showCmvErrorsx('Unsuported currency')})
+    axios.get(cryptoUrlQuick).then((res)=>{setCoinArr(res.data)}).catch((err)=>{showCmvErrorsx("Can't fetch data")})
     }
 
  setQuickData(false)
@@ -159,7 +110,7 @@ axios.get(cryptoUrl).then((res)=>{setCoinArr(res.data)}).then().catch((err)=>{ s
 }
 else{
 const endUpdate = clearInterval(getLatestCoinInfo)
-showCmvErrorsx('Updates are on hold, press play');
+showCmvErrorsx('press play!');
 }
 },realTimeUpdate)
 return ()=> clearInterval(getLatestCoinInfo)
@@ -240,7 +191,7 @@ if(typeof window !== 'undefined'){
 	
 	 const playAll = ()=>{
 	  hideCmvErrorsx();
-	  Voicecoin(finalComp,setCmvAction=setCmvAction,setCmvErrorsx=setCmvErrorsx);
+	  Voicecoin(finalComp,setCmvAction=setCmvAction,setCmvErrorsx=setCmvErrorsx,null,null,null,setColorContBtns=setColorContBtns);
 	  setPaused(true);
 	  setIsPlaying(true);
       setRunOrStop(true);

@@ -2,7 +2,7 @@ import React, {Suspense, useState,useEffect,useRef} from 'react';
 import Home from '../pages/index.js'
 import {data1,Speech} from '../pages/index.js'
 import axios from 'axios'
-import styles from '../styles/RemoveCoin.module.css'
+import styles from '../styles/DisplayAllCoins.module.css'
 import {FaTrashAlt} from 'react-icons/fa'
 import {addCoin,buy,activeCoins,AddCrypto,coinIsexistinErr} from '../src/addcoin.js'
 import {FaBars,FaPlay,FaPause,FaPlayCircle,FaRegPlayCircle,FaRegPauseCircle,FaRegStopCircle} from 'react-icons/fa'
@@ -15,9 +15,10 @@ currency,setCurrency,cmvErrorsx,setCmvErrorsx,currencySingular,currencyPlural,cm
 	
 const deleteIcon = useRef([])
 const playIcon = useRef([])
-const pauseIcon = useRef([])
-const [currentPlay,setCurrentPlay]  = useState()
+const stopIcon = useRef([])
+const currentIndex = useRef(null)
 
+const [currentPlay,setCurrentPlay]  = useState()
 const [play,setPlay] = useState(false)
 const [coinInfoArr,setCoinInfoArr] = useState([])
 const [finalInfoComp,setFinalInfoComp] = useState([])
@@ -70,7 +71,7 @@ if(trackPlayed.length > 1){
 console.log(previousPlay)
 console.log(trackPlayed[0], trackPlayed[0 + 1])
 
-pauseIcon.current[trackPlayed[previousPlay]].style.display = 'none'	
+stopIcon.current[trackPlayed[previousPlay]].style.display = 'none'	
 playIcon.current[trackPlayed[previousPlay]].style.display = 'block'	
 }	
 */
@@ -104,13 +105,13 @@ setFinalInfoComp(recompInfoArr.toString());
 
 }
 
-
+console.log(currentIndex.current)
 useEffect(()=>{
 composeMsg()
 },[coinInfoArr])
 
 useEffect(()=>{
-Voicecoin(finalInfoComp,setCmvAction=setCmvAction,setCmvErrorsx=setCmvErrorsx)
+Voicecoin(finalInfoComp,setCmvAction=setCmvAction,setCmvErrorsx=setCmvErrorsx,currentIndex.current,playIcon,stopIcon,null)
 },[finalInfoComp])
 
 
@@ -119,7 +120,8 @@ const playVoice = (num,coinId)=>{
 stop()
 addCoinId(coinId)
 playIcon.current[num].style.display = 'none'		
-pauseIcon.current[num].style.display = 'block'
+stopIcon.current[num].style.display = 'block'
+currentIndex.current = num;
 setPaused(true)
 }
 
@@ -128,7 +130,7 @@ setPlayCoinInfo(coinId);
 }
 
 const stopVoice = (num,coinId)=>{
-pauseIcon.current[num].style.display = 'none'	
+stopIcon.current[num].style.display = 'none'	
 playIcon.current[num].style.display = 'block'	
 stop()	
 setPlayCoinInfo('');
@@ -144,7 +146,7 @@ deleteIcon.current[i].style.display = 'block';
 const MouseLeaveEvents = (i)=>{
 deleteIcon.current[i].style.display = 'none';
 playIcon.current[i].style.display = 'block';
-pauseIcon.current[i].style.display = 'none';
+stopIcon.current[i].style.display = 'none';
 }
 
 return(
@@ -167,8 +169,8 @@ onMouseDown = {()=> {playVoice(i,display.id)}}   >
 <FaRegPlayCircle style={{verticalAlign:'bottom'}} />
 </span> 
 
-<span  key = {display.name+'pause'+i}  className={styles.displayCoin_pauseIcon} style = {{display:'none'}} 
-ref = {(myPauseIcon)=> pauseIcon.current[i] = myPauseIcon} onMouseDown = {()=> stopVoice(i,display.id)}  >
+<span  key = {display.name+'pause'+i}  className={styles.displayCoin_stopIcon} style = {{display:'none'}} 
+ref = {(mystopIcon)=> stopIcon.current[i] = mystopIcon} onMouseDown = {()=> stopVoice(i,display.id)}  >
 <FaRegStopCircle /> 
 </span> 
 </div> 

@@ -9,7 +9,7 @@ width: 60%;
 margin: auto;
 overflow: auto;
 resize: vertical;
-border: 1px solid rgb(94, 129, 139);
+border: 1px solid rgb(86, 231, 241);
 }
 .displayCoin_screen{
 display: flex;
@@ -30,12 +30,12 @@ display: flex;
 width: 22%;
 height: 3rem;
 align-items: center;
-border: 1px solid rgba(94, 129, 139, 0.226);
+border: 1px solid rgba(86, 231, 241, 0.226);
 padding: 0.3rem;
 overflow: hidden;
 word-break: break-all;
 position: relative;
-box-shadow: 0 1px 2px 0 rgba(180, 180, 180, 0.2), 0 2px 2px 0 rgba(177, 177, 177, 0.19);
+box-shadow: 0px 5px 16px -8px rgba(82, 102, 100, 0.1);
 margin-bottom: 1rem;
 }
 
@@ -46,7 +46,7 @@ padding-right:0.5rem;
 }
 .displayCoin_name{
 font-weight: 600;
-color: rgb(69, 119, 133);
+color: rgb(91, 212, 196);
 }
 .displayCoin_delete{
 position: absolute;
@@ -64,7 +64,7 @@ transition-delay: 1s;
 display: none;
 }
 .displayCoin_deleteIcon{
-color: rgb(94, 129, 139);
+color: rgb(91, 212, 196);
 }
 .displayCoin_playNdelete{
 display:flex;
@@ -80,7 +80,7 @@ transform: translateY(-50%);
 }
 .displayCoin_playNpause{
 display:flex;
-color: rgb(94, 129, 139);
+color: rgb(91, 212, 196);
 font-size:2rem;	
 position:relative;
 width:25%;
@@ -97,7 +97,7 @@ position: absolute;
 top:-10%;
 line-height:80%;
 }
-.displayCoin_pauseIcon{
+.displayCoin_stopIcon{
 position: absolute;	
 top:-10%;
 line-height:80%;
@@ -163,9 +163,7 @@ margin-bottom: 1.1rem;
 font-weight: 600;
 font-size: 2.3vw;
 }   
-.displayCoin_deleteIcon{
-color: rgb(94, 129, 139);
-}
+
 .displayCoin_playNdelete{
 display:flex;
 justify-content:flex-end;
@@ -180,7 +178,6 @@ transform: translateY(-50%);
 }
 .displayCoin_playNpause{
 display:flex;
-color: rgb(94, 129, 139);
 font-size:2.5rem;	
 position:relative;
 width:25%;
@@ -218,7 +215,7 @@ display: flex;
 width: 31%;
 height: 4rem;
 align-items: center;
-border: 1px solid rgb(170, 170, 170);
+border: 1px solid rgba(86, 231, 241, 0.226);
 padding: 0.3rem;
 word-break: break-all;
 position: relative;
@@ -231,7 +228,6 @@ font-weight: 600;
 font-size: 4vw;
 }  
 .displayCoin_deleteIcon{
-color: rgb(94, 129, 139);
 }
 .displayCoin_playNdelete{
 display:flex;
@@ -247,7 +243,6 @@ transform: translateY(-50%);
 }
 .displayCoin_playNpause{
 display:flex;
-color: rgb(94, 129, 139);
 font-size:2.8rem;	
 position:relative;
 width:25%;
@@ -290,7 +285,6 @@ margin-bottom: 0.8rem;
 }
 .displayCoin_deleteIcon{
 font-size: 6vw;
-color: rgb(94, 129, 139);
 }
 .displayCoin_name{
 font-weight: 600;
@@ -310,7 +304,6 @@ transform: translateY(-50%);
 }
 .displayCoin_playNpause{
 display:flex;
-color: rgb(94, 129, 139);
 font-size:3.5rem;	
 position:relative;
 width:25%;

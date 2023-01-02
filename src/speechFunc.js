@@ -29,13 +29,8 @@ setCmvErrorsx("An error occurred :", e)
 }
    
   
-export function Voicecoin(compMsg,setCmvAction,setCmvErrorsx) {
+export function Voicecoin(compMsg,setCmvAction,setCmvErrorsx,num,playIcon,stopIcon,setColorContBtns) {
 	
-    
-//  hideCmvErrorsx();
-   
-//  setIsPlaying(true);
-//  setRunOrStop(true);
 
 speech.speak({
 text: compMsg,
@@ -48,6 +43,9 @@ setCmvAction("Playing...");
 },
 onend: () => {
 setCmvAction("The end!")
+playIcon && num !== null ? playIcon.current[num].style.display = 'block' : ''
+stopIcon && num !== null ? stopIcon.current[num].style.display = 'none' : ''
+setColorContBtns !== null? setColorContBtns(1) : ''
 },
 onresume: () => {
 //setCmvAction("Resumed")

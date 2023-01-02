@@ -8,12 +8,13 @@ import Link from 'next/link'
 
 
 
-function Navbar(){
-  const [toggle, setToggle] = useState(false)
 
-  const toggleMenu = ()=> {
-    !toggle ? setToggle(true) : setToggle(false);
-  }
+function Navbar(){
+const [toggle, setToggle] = useState(false)
+
+const toggleMenu = ()=> {
+!toggle ? setToggle(true) : setToggle(false);
+}
 
 
 return(

@@ -44,7 +44,7 @@
     text-align: center;
     font-weight: 500;
     font-size: 1.2vw;
-    color: rgb(229, 237, 245);
+    color: rgb(219, 253, 255);
 	margin-top:2rem;
 	margin-bottom:3rem;
 }
@@ -108,7 +108,7 @@ padding-bottom: 0rem;
     flex: 1;
 }
 .footer_links_contianer >ul{
-    color: rgb(216, 216, 216); 
+    color: rgb(219, 253, 255);; 
     list-style: none;
     display: flex;
     font-size: 0.6em;
@@ -120,7 +120,7 @@ padding-bottom: 0rem;
 }
 
 .footer_Social{
-    color: rgb(216, 216, 216); 
+    color: rgb(219, 253, 255); 
     font-size: 0.6em;
     align-items: center;
     gap: 1.5vw;
@@ -139,50 +139,44 @@ padding-bottom: 0rem;
 
 }
 .footer_ul{
-   margin-left: auto; 
+margin-left: auto; 
 }
 .footer_Social >ul>li{
-   font-size: 2vw;
-   transition: 0.4s;
-  
-  
- }
+font-size: 2vw;
+transition: 0.4s;
+}
  .footer_Social >ul>li :hover{
-color: rgb(184, 214, 228);
+color: rgb(150, 255, 250);
 transition: 0.4s;    
 }
- .copyRight{
-    color: rgb(216, 216, 216); 
-    font-size: 0.6em;
-    width: 50%;
-    margin: auto;
-    padding-bottom: 1rem;
-    
- 
- }
- .upButton{
- position: fixed;
- right: 2vw;
- bottom: 2%;
- background-color: rgba(19, 41, 51, 0);
- border: 0;
- color: rgb(243, 236, 236) ;
- padding: 1.2% 1.2% 1% 1.2%;
- border-radius: 50%;
- border: 2px solid rgb(14, 48, 65);
- border-style: dashed;
- color: rgb(14, 48, 65);
- font-size: 1em;
- cursor: pointer;
- }
-
+.copyRight{
+color: rgb(219, 253, 255); 
+font-size: 0.6em;
+width: 50%;
+margin: auto;
+padding-bottom: 1rem;
+}
+.upButton{
+position: fixed;
+right: 2vw;
+bottom: 2%;
+background-color: rgba(19, 41, 51, 0);
+border: 0;
+color: rgb(86, 231, 241);
+padding: 1.2% 1.2% 1% 1.2%;
+border-radius: 50%;
+border: 2px solid rgb(86, 231, 241);
+border-style: dashed;
+font-size: 1em;
+cursor: pointer;
+}
 
 
 @media screen and (max-width: 930px) {     
 .footer{
-    width: 100%;
-    padding-top: 5vw;
-    margin-top: 30vw;
+width: 100%;
+padding-top: 5vw;
+margin-top: 30vw;
 }
 .footer_logo{
     display: flex;
@@ -222,45 +216,7 @@ transition: 0.4s;
     width: 80%;
     margin: auto;
 }
-.footer_addressContacts{
-    width: 80%;
-    margin: auto;
-    display: flex;
-    gap: 10%;
-}
-.footer_addressContacts1{
-    flex: 2.5;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-}
-.footer_addressContacts2{
-    flex: 2.5;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-}
-.footer_addressContacts3{
-    flex: 2.5;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-}
-.footer_addressContacts2_hdr{
-    color: rgb(250, 246, 246);
-    font-weight: bold;
-    padding-bottom: 0.5rem;
-    font-size: 3vw;
-}
-.footer_addressContacts2_2{
-    color: rgb(216, 216, 216);
-    font-size: 1em;
-}
-.footer_addressContacts2_tel{
-    color: rgb(216, 216, 216);
-    font-size: 1.2em;
-    font-weight: bold;
-}
+
 .footer_links{
     width: 80%;
     display: flex;
@@ -275,7 +231,6 @@ transition: 0.4s;
     flex: 1;
     }
     .footer_links_contianer >ul{
-    color: rgb(216, 216, 216); 
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -289,7 +244,6 @@ transition: 0.4s;
 	padding:1.5vw
 	}
     .footer_Social{
-    color: rgb(216, 216, 216); 
     font-size: 1.2em;
     align-items: right;
     cursor: pointer;
@@ -317,27 +271,27 @@ transition: 0.4s;
         
     }
      .copyRight{
-        color: rgb(216, 216, 216); 
         font-size: 1em;
         width: 80%;
         margin: auto;
         padding-bottom: 1rem;
-        text-align: center;
-        
+        text-align: center; 
      }
-     .upButton{
-     position: fixed;
-     right: 2vw;
-     border: 0;
-     color: rgb(243, 236, 236) ;
-     border: 2px solid rgb(14, 48, 65);
-     border-style: dashed;
-     color: rgb(14, 48, 65);
-     padding: 1.5% 1.7% 0.7% 1.5%;
-     border-radius: 50%;
-     font-size: 1.5em;
-     cursor: pointer;
-     }
+.upButton{
+position: fixed;
+right: 2vw;
+bottom: 2%;
+background-color: rgba(19, 41, 51, 0);
+border: 0;
+color: rgb(86, 231, 241);
+padding: 1.2% 1.2% 1% 1.2%;
+border-radius: 50%;
+border: 2px solid rgb(86, 231, 241);
+border-style: dashed;
+font-size: 1em;
+cursor: pointer;
+}
+
 
 }
 
@@ -383,48 +337,7 @@ transition: 0.4s;
         width: 80%;
         margin: auto;
     }
-    .footer_addressContacts{
-        width: 50%;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-    }
-    .footer_addressContacts1{
-        width: 100%;
-        text-align: center;
-        display: flex;
-        margin-bottom: 2rem;
-        flex-direction: column;
-    }
-    .footer_addressContacts2{
-        width: 100%;
-        text-align: center;
-        display: flex;
-        margin-bottom: 2rem;
-        flex-direction: column;
-    }
-    .footer_addressContacts3{
-        width: 100%;
-        text-align: center;
-        display: flex;
-        margin-bottom: 2rem;
-        flex-direction: column;
-    }
-    .footer_addressContacts2_hdr{
-        color: rgb(250, 246, 246);
-        font-weight: bold;
-        padding-bottom: 0.5rem;
-        font-size: 1.2em;
-    }
-    .footer_addressContacts2_2{
-        color: rgb(216, 216, 216);
-        font-size: 1em;
-    }
-    .footer_addressContacts2_tel{
-        color: rgb(216, 216, 216);
-        font-size: 1em;
-        font-weight: bold;
-    }
+
     .footer_links{
         width: 80%;
         display: flex;
@@ -439,8 +352,7 @@ transition: 0.4s;
         .footer_links_contianer{
             flex: 1;
         }
-        .footer_links_contianer >ul{
-            color: rgb(216, 216, 216); 
+        .footer_links_contianer >ul{ 
             list-style: none;
             display: flex;
             font-size: 3.2vw;
@@ -451,7 +363,6 @@ transition: 0.4s;
         
         
         .footer_Social{
-            color: rgb(216, 216, 216); 
             font-size: 1em;
             align-items: right;
             cursor: pointer;
@@ -478,7 +389,6 @@ transition: 0.4s;
             
         }
          .copyRight{
-            color: rgb(216, 216, 216); 
             font-size: 0.9em;
             width: 80%;
             margin: auto;
@@ -490,11 +400,9 @@ transition: 0.4s;
          position: fixed;
          right: 2vw;
          top: 85%;
-         color: rgb(243, 236, 236) ;
-
-        border: 2px solid rgb(14, 48, 65);
+         border: 2px solid rgb(86, 231, 241);
          border-style: dashed;
-         color: rgb(14, 48, 65);
+         color: rgb(86, 231, 241);
          padding: 1% 0% 0% 0%;
          width:9vw;
          height: 9vw;
