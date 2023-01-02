@@ -238,7 +238,7 @@
   }
   .displayCoin_playNpause {
     display: flex;
-    font-size: 8vw;
+    font-size: 8.2vw;
     position: relative;
     width: 25%;
     height: auto;
@@ -299,7 +299,7 @@
   }
   .displayCoin_playNpause {
     display: flex;
-    font-size: 12.5vw;
+    font-size: 12.7vw;
     position: relative;
     width: 25%;
     height: auto;
