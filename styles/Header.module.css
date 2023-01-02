@@ -11,10 +11,7 @@
   justify-content: flex-start;
   position: relative;
   background-color: rgb(86, 231, 241);
-  background-image: -webkit-radial-gradient(
-    rgb(86, 231, 241),
-    rgba(63, 194, 187, 0.801)
-  );
+  background-image: -webkit-radial-gradient(rgb(86, 231, 241),rgba(63, 194, 187, 0.801));
   align-items: center;
   position: fixed;
   top: 0%;

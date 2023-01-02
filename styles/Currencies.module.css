@@ -1,19 +1,98 @@
-.CMVCurrencies{
-    width: 80%;
+.CMVCurrencies {
+  width: 80%;
+  margin: auto;
+  padding-top: 0.3rem;
+}
+.CMVCurrencies_main {
+  height: auto;
+  width: 60%;
+  border: 1px solid rgb(86, 231, 241);
+  margin: auto;
+  position: relative;
+  box-shadow: 0 1px 2px 0 rgba(180, 180, 180, 0.2),
+    0 1px 2px 0 rgba(177, 177, 177, 0.19);
+  margin-bottom: 23em;
+}
+.CMVCurrencies_changeCurrency {
+  display: flex;
+  height: auto;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.CMVCurrencies_input {
+  flex: 0.5;
+  height: 2.8em;
+  padding-left: 0.2rem;
+  border: 0em;
+  color: rgb(91, 212, 196);
+  outline: none;
+  background-color: transparent;
+}
+.CMVCurrencies_input::placeholder {
+  color: rgba(91, 212, 196, 0.438);
+}
+.CMVCurrencies_input:focus {
+  outline: none !important;
+  border-right: 0px solid rgba(53, 91, 102, 0.123);
+}
+.CMVCurrencies_currentCurrency {
+  display: flex;
+  flex: 0.5;
+  height: 2em;
+  align-items: center;
+  padding-right: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+.CMVCurrencies_currentCurrency p {
+  margin-left: auto;
+  font-weight: 500;
+  font-size: 1.3vw;
+  display: flex;
+  align-items: center;
+  color: rgb(91, 212, 196);
+}
+.CMVCurrencies_check {
+  padding: 0%;
+  display: flex;
+  align-items: center;
+  color: rgb(91, 212, 196);
+}
+.CMVCurrencies_currencyInfo {
+  position: absolute;
+  width: 50%;
+  padding: 0rem;
+}
+.CMVCurrencies_currencylist {
+  padding: 0.5em;
+  border: 1px solid rgb(86, 231, 241);
+  border-style: dashed;
+  color: rgb(91, 212, 196);
+  border-radius: 0rem 0rem 1rem 1rem;
+  cursor: pointer;
+}
+.CMVCurrencies_LS {
+  text-align: center;
+  margin-top: 2em;
+  color: rgb(91, 212, 196);
+}
+
+@media screen and (max-width: 920px) {
+  .CMVCurrencies {
+    width: 75%;
     margin: auto;
     padding-top: 0.3rem;
-}
-.CMVCurrencies_main{
+  }
+  .CMVCurrencies_main {
     height: auto;
-    width: 60%;
-    border: 1px solid rgb(86, 231, 241);
+    width: 100%;
     margin: auto;
     position: relative;
-    box-shadow: 0 1px 2px 0 rgba(180, 180, 180, 0.2), 0 1px 2px 0 rgba(177, 177, 177, 0.19);
-    margin-bottom: 23em;
-   
-    }
-.CMVCurrencies_changeCurrency{
+  }
+  .CMVCurrencies_changeCurrency {
     display: flex;
     height: auto;
     width: 100%;
@@ -21,24 +100,15 @@
     position: relative;
     justify-content: center;
     align-items: center;
-}
-.CMVCurrencies_input{
-   flex: 0.5;
-   height: 2.8em;
-   padding-left: 0.2rem;
-   border: 0em;
-   color: rgb(91, 212, 196);
-   outline: none;
-   background-color: transparent;
-}
-.CMVCurrencies_input::placeholder{
-   color: rgba(91, 212, 196, 0.438);
-}
-.CMVCurrencies_input:focus{
-    outline: none !important;
-    border-right:0px solid rgba(53, 91, 102, 0.123);   
-}
-.CMVCurrencies_currentCurrency{
+  }
+  .CMVCurrencies_input {
+    flex: 0.5;
+    height: 2.8em;
+    padding-left: 0.2rem;
+    font-size: 1.8vw;
+    border: 0em;
+  }
+  .CMVCurrencies_currentCurrency {
     display: flex;
     flex: 0.5;
     height: 2em;
@@ -46,119 +116,39 @@
     padding-right: 0.5rem;
     justify-content: center;
     align-items: center;
-
-}
-.CMVCurrencies_currentCurrency p{
+  }
+  .CMVCurrencies_currentCurrency p {
     margin-left: auto;
     font-weight: 500;
-    font-size: 1.3vw;
-    display: flex;
-    align-items: center;
-    color: rgb(91, 212, 196);
-}
-.CMVCurrencies_check{
+    font-size: 1.5vw;
+  }
+  .CMVCurrencies_check {
     padding: 0%;
-    display: flex;
-    align-items: center;
-    color: rgb(91, 212, 196);
-}
-.CMVCurrencies_currencyInfo{
-    position: absolute; 
+  }
+  .CMVCurrencies_currencyInfo {
+    position: absolute;
     width: 50%;
     padding: 0rem;
-
-}
-.CMVCurrencies_currencylist{
-    padding: 0.5em;
-    border: 1px solid rgb(86, 231, 241);  
+  }
+  .CMVCurrencies_currencylist {
+    padding: 0.2em;
+    border: 1px solid rgb(73, 73, 73);
     border-style: dashed;
-    color: rgb(91, 212, 196);
-	border-radius: 0rem 0rem 1rem 1rem;
-	cursor:pointer;
+  }
 }
-.CMVCurrencies_LS{
-    text-align: center;
-    margin-top: 2em;
-    color: rgb(91, 212, 196);
-}
-
-@media screen and (max-width: 920px) {
-    .CMVCurrencies{
-        width: 75%;
-        margin: auto;
-        padding-top: 0.3rem;
-    }
-    .CMVCurrencies_main{
-        height: auto;
-        width: 100%;
-        margin: auto;
-        position: relative;
-       
-        }
-    .CMVCurrencies_changeCurrency{
-        display: flex;
-        height: auto;
-        width: 100%;
-        margin: auto;
-        position: relative;
-        justify-content: center;
-        align-items: center;
-    }
-    .CMVCurrencies_input{
-       flex: 0.5;
-       height: 2.8em;
-       padding-left: 0.2rem;
-	   font-size: 1.8vw;
-       border: 0em;
-    }
-    .CMVCurrencies_currentCurrency{
-        display: flex;
-        flex: 0.5;
-        height: 2em;
-        align-items: center;
-        padding-right: 0.5rem;
-        justify-content: center;
-        align-items: center;
-    
-    }
-    .CMVCurrencies_currentCurrency p{
-        margin-left: auto;
-        font-weight: 500;
-        font-size: 1.5vw;
-    }
-    .CMVCurrencies_check{
-        padding: 0%;
-
-    }
-    .CMVCurrencies_currencyInfo{
-        position: absolute; 
-        width: 50%;
-        padding: 0rem;   
-    }
-    .CMVCurrencies_currencylist{
-        padding: 0.2em;
-        border: 1px solid rgb(73, 73, 73);  
-        border-style: dashed;
-    }
-    }
-
-
-
-
 
 @media screen and (max-width: 550px) {
-.CMVCurrencies{
+  .CMVCurrencies {
     width: 95%;
     margin: auto;
-}
-.CMVCurrencies_main{
+  }
+  .CMVCurrencies_main {
     height: auto;
     width: 100%;
     margin: auto;
     position: relative;
-   
-    }
-.CMVCurrencies_changeCurrency{
+  }
+  .CMVCurrencies_changeCurrency {
     display: flex;
     height: auto;
     width: 100%;
@@ -166,14 +156,14 @@
     position: relative;
     justify-content: center;
     align-items: center;
-}
-.CMVCurrencies_input{
+  }
+  .CMVCurrencies_input {
     flex: 0.6;
     height: 2.7em;
     padding-left: 0.2rem;
     font-size: 4.5vw;
-}
-.CMVCurrencies_currentCurrency{
+  }
+  .CMVCurrencies_currentCurrency {
     display: flex;
     flex: 0.5;
     height: 2.4em;
@@ -182,23 +172,22 @@
     justify-content: center;
     align-items: center;
     font-size: 3.2vw;
-
-}
-.CMVCurrencies_currentCurrency p{
+  }
+  .CMVCurrencies_currentCurrency p {
     margin-left: auto;
     font-weight: 500;
     font-size: 4vw;
-}
-.CMVCurrencies_check{
+  }
+  .CMVCurrencies_check {
     padding: 0%;
     font-size: 4.3vw;
-}
-.CMVCurrencies_currencyInfo{
+  }
+  .CMVCurrencies_currencyInfo {
     position: absolute;
     width: 50%;
     padding: 0rem;
-}
-.CMVCurrencies_currencylist{
+  }
+  .CMVCurrencies_currencylist {
     padding: 0.2em;
-}
+  }
 }

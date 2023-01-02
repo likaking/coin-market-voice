@@ -91,7 +91,7 @@
   margin-top: 10%;
   font-size: 2vw;
   text-shadow: 1px 1px rgba(73, 112, 128, 0.137);
-  font-family: Audiowide;
+  font-family: Allerta Stencil;
 }
 
 .banner_div_L_hdr2 {
@@ -308,6 +308,7 @@
     padding-right: 0rem;
     height: 45vw;
     background-position: -15%;
+    background-image: url("../public/modelF.png");
     border-radius: 0rem 10rem 10rem 10rem;
   }
 
@@ -424,6 +425,7 @@
     padding-right: 0rem;
     height: 45vw;
     background-position: -45%;
+    background-image: url("../public/modelF.png");
     border-radius: 0rem 10rem 10rem 10rem;
   }
 
@@ -491,6 +493,7 @@
     padding-right: 0rem;
     height: 45vw;
     background-position: -70%;
+    background-image: url("../public/modelF.png");
     border-radius: 0rem 10rem 10rem 10rem;
   }
 }
@@ -503,8 +506,8 @@
     height: 23em;
     background-position: 70%;
     background-size: cover;
+    background-image: url("../public/modelF.png");
     border-radius: 0em 0em 4em 4em;
-    background-color: rgb(204, 240, 243);
   }
 
   .cmv_top {
@@ -538,35 +541,6 @@
     overflow: hidden;
     display: none;
   }
-
-  .banner_div_L_hdr {
-    font-size: 6vw;
-    line-height: 80%;
-    margin-top: 10%;
-    text-shadow: 1px 1px rgba(150, 207, 229, 0.349);
-    padding-left: 0.2em;
-  }
-
-  .banner_div_L_hdr2 {
-    font-size: 10vw;
-    line-height: 100%;
-    padding: 0;
-    margin: 0;
-    padding-left: 0.2em;
-  }
-
-  .banner_div_L_subhdr {
-    text-shadow: 1px 1px rgba(120, 182, 207, 0.247);
-    font-size: 4vw;
-    padding-left: 0.5em;
-  }
-
-  .banner_div_L_P {
-    font-size: 1.1em;
-    text-shadow: 1px 1px rgba(124, 187, 212, 0.329);
-    display: none;
-  }
-
   .cmv_device_contianer {
     width: 95%;
     margin: auto;
@@ -617,38 +591,42 @@
     display: none;
   }
 
-  .banner_div_L_hdr_mobile {
-    color: rgb(243, 254, 255);
-    line-height: 80%;
-    margin-top: 10%;
-    font-size: 5vw;
-    padding-left: 2vw;
-    text-shadow: 2px 2px rgba(73, 112, 128, 0.137);
-    display: block;
-  }
+ 
+.banner_div_L_hdr_mobile {
+  color: rgb(86, 231, 241);
+  line-height: 80%;
+  margin-top: 10%;
+  font-size: 6vw;
+  text-shadow: 1px 1px rgba(73, 112, 128, 0.137);
+  font-family: Allerta Stencil;
+  padding-left:2vw;
+  display: block;
+}
 
-  .banner_div_L_hdr2_mobile {
-    color: rgb(243, 254, 255);
-    font-size: 9vw;
-    line-height: 100%;
-    padding-left: 2vw;
-    margin: 0;
-    text-shadow: 2px 2px rgba(133, 144, 148, 0.205);
-    display: block;
-  }
+.banner_div_L_hdr2_mobile {
+  color: rgb(86, 231, 241);
+  font-size: 9vw;
+  line-height: 100%;
+  padding: 0;
+  margin: 0;
+  padding-left:2vw;
+  text-shadow: 1px 1px rgba(133, 144, 148, 0.205);
+  font-family: Audiowide;
+  display: block;
+}
 
-  .banner_div_L_subhdr_mobile {
-    color: rgb(243, 254, 255);
-    text-shadow: 1px 1px rgba(149, 154, 156, 0.137);
-    padding-left: 2vw;
-    display: block;
-  }
+.banner_div_L_subhdr_mobile {
+  color: rgb(86, 231, 241);
+  padding-left:2vw;
+  text-shadow: 1px 1px rgba(149, 154, 156, 0.137);
+  display: block;
+}
 
-  .banner_div_L_P_mobile {
-    color: rgb(219, 253, 255);
-    font-size: 1vw;
-    display: none;
-  }
+.banner_div_L_P_mobile {
+  color: rgb(219, 253, 255);
+  font-size: 1vw;
+  display: none;
+}
 }
 
 @media screen and (max-width: 430px) {
@@ -663,6 +641,7 @@
     padding-right: 0rem;
     height: 23em;
     background-position: 70%;
+    background-image: url("../public/modelF.png");
     background-size: cover;
   }
 
@@ -696,34 +675,6 @@
     border-top-right-radius: 10em;
     border-radius: 0em 0em 0em 0em;
     overflow: hidden;
-    display: none;
-  }
-
-  .banner_div_L_hdr {
-    line-height: 80%;
-    font-size: 6vw;
-    margin-top: 10%;
-    text-shadow: 2px 2px rgba(124, 187, 212, 0.329);
-    padding-left: 0.2em;
-  }
-
-  .banner_div_L_hdr2 {
-    font-size: 10vw;
-    line-height: 100%;
-    padding: 0;
-    margin: 0;
-    padding-left: 0.2em;
-  }
-
-  .banner_div_L_subhdr {
-    text-shadow: 2px 2px rgba(120, 182, 207, 0.247);
-    font-size: 4vw;
-    padding-left: 0.5em;
-  }
-
-  .banner_div_L_P {
-    font-size: 1.1em;
-    text-shadow: 1px 1px rgba(124, 187, 212, 0.329);
     display: none;
   }
 

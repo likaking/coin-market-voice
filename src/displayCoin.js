@@ -93,7 +93,6 @@ const recompInfoArr = []
 
 const composeMsg = async()=>{
 
- 
 let allNews  =  await coinInfoArr.map((news)=>{ 
 let priceFlow = Math.floor(news.current_price) > 1 ?  currencyPlural : currencySingular;
 let fixPricePrecision = news.current_price >= 1 ? news.current_price.toLocaleString() : news.current_price < 0.1 ? news.current_price : news.current_price.toFixed(2);
@@ -102,8 +101,9 @@ var recomp = composeInfo.replace(/\./g,' point ')
 recompInfoArr.push(recomp +' ' + ' ' + ' ' + ' '+ ' ')
 })
 setFinalInfoComp(recompInfoArr.toString()); 
+setFinalInfoComp('')
 }
-console.log(finalInfoComp)
+
 useEffect(()=>{
 composeMsg()
 },[coinInfoArr])
