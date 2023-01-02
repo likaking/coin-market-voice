@@ -20,7 +20,7 @@
   margin-bottom: 15vh;
   display: flex;
   border-bottom: 0px solid rgba(130, 157, 165, 0.24);
-  background-image: url("/modelF.png");
+      background-image: url('/modelF.png');
   background-repeat: no-repeat;
   background-position: 25%;
   overflow: hidden;
@@ -342,8 +342,7 @@
     background-color: rgb(239, 242, 248);
     left: -120%;
     top: -10%;
-    box-shadow: 0 3px 15px 0 rgba(180, 180, 180, 0.2),
-      0 2px 10px 0 rgba(177, 177, 177, 0.19);
+    box-shadow: 0 3px 15px 0 rgba(180, 180, 180, 0.2),0 2px 10px 0 rgba(177, 177, 177, 0.19);
     display: none;
   }
 
@@ -491,7 +490,6 @@
     padding-right: 0rem;
     height: 45vw;
     background-position: -70%;
-    background-image: url("../public/modelF.png");
     border-radius: 0rem 10rem 10rem 10rem;
   }
 }
