@@ -158,7 +158,6 @@ return(
 activeCoins && activeCoins.length > 0 && activeCoins.map((display,i)=>
 <div key = {display.symbol+i} className={styles.displayCoin_container} onMouseEnter = {()=>{MouseEntaEvents(i,display.id)}}  onMouseLeave = {()=>{MouseLeaveEvents(i)}} >
 <img src = {display.image} alt ={display.name} className={styles.displayCoin_img}/>
-
 <div  className={styles.displayCoin_name}>{display.symbol !== undefined? display.symbol.toUpperCase() : ''}</div>
 <div className={styles.displayCoin_delete} ref = {(el)=> {deleteIcon.current[i] = el}}>
 <div className={styles.displayCoin_playNdelete}>

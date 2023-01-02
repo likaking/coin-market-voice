@@ -30,12 +30,12 @@
   width: 22%;
   height: 3rem;
   align-items: center;
-  border: 1px solid rgba(86, 231, 241, 0.226);
+  border: 1px solid rgba(86, 231, 241, 0.326);
   padding: 0.3rem;
   overflow: hidden;
   word-break: break-all;
   position: relative;
-  box-shadow: 0px 5px 16px -8px rgba(82, 102, 100, 0.1);
+  box-shadow: 0px 10px 22px -13px rgba(0,0,0,0.1);
   margin-bottom: 1rem;
 }
 
@@ -238,7 +238,7 @@
   }
   .displayCoin_playNpause {
     display: flex;
-    font-size: 9vw;
+    font-size: 8.5vw;
     position: relative;
     width: 25%;
     height: auto;
@@ -300,7 +300,7 @@
   }
   .displayCoin_playNpause {
     display: flex;
-    font-size: 13.3vw;
+    font-size: 13vw;
     position: relative;
     width: 25%;
     height: auto;
