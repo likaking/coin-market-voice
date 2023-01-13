@@ -103,6 +103,60 @@
 .nav_Mobilemenu {
   display: none;
 }
+.nav_bar_dropDown_ourProducts{
+	position:absolute;
+    top:101%;
+	width:100%;
+	height:auto;
+	align-items:center;
+	}
+	.nav_bar_dropDown_ourProducts_container{
+	display:flex;
+	width:25%;
+	background-color:white;
+	justify-content:center;
+	flex-wrap:wrap;
+	height:20rem;
+	padding:1rem;
+	border-bottom-left-radius: 1rem;
+	box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.1);
+	transition:0.5s;
+	}
+	.nav_bar_dropDown_ourProducts_listContainer{
+	width:45%;
+	height:46%;
+	margin:0.4rem;
+	border-radius:10px;
+	overflow:hidden;
+	border: 1px solid rgba(63, 194, 187, 0.801);
+	}
+	
+	.nav_bar_dropDown_ourProducts_listContainer:hover{
+	box-shadow: 0px 0px 13px 0px rgba(0,0,0,0.1);
+	border: 1px solid rgba(63, 194, 187, 0.801);
+	border-style: dashed;
+	}
+	
+	.nav_bar_dropDown_ourProducts_img{
+	width:100%;
+	height:80%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	}
+	.nav_bar_dropDown_ourProducts_imgMain{
+	height:70%;
+	width:auto;
+	
+	}
+	.nav_bar_dropDown_ourProducts_name{
+	width:100%;
+	height:20%;
+	text-align:center;
+	font-size:0.8rem;
+	vertical-align:middle;
+	color:rgba(63, 194, 187, 0.801);
+	}
 
 @media screen and (max-width: 920px) {
   .nav_bar {
@@ -343,13 +397,26 @@
   }
 
   .nav_Mobilemenu ul li:hover {
-    color: rgb(245, 190, 245);
+    color: white;
   }
 
   .nav_bar__menu_aMobile {
     text-decoration: none;
     color: inherit;
   }
+   .nav_ourAmazingProducts{
+	    position:relative; 
+		transition: 0.4s;
+	    }
+	   .nav_ourAmazingProducts_container{
+	
+        width:98%;
+        height:auto;
+		padding:2vw;
+		border-radius:0.5rem;
+		background-color:white;		
+		box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.1);
+	   }
 
   /*
         @keyframes imageroto {
@@ -457,7 +524,7 @@
 
   .nav_Mobilemenu {
     color: rgb(196, 248, 244);
-    width: 85%;
+    width: 95%;
     height: 94vh;
     right: -1.8%;
     top: 101%;
@@ -489,7 +556,7 @@
   }
 
   .nav_Mobilemenu ul li:hover {
-    color: rgb(245, 190, 245);
+    color: white;
   }
 
   .nav_Mobilemenu_battleNet {

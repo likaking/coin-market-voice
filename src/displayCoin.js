@@ -107,13 +107,12 @@ setCurrentTime(Date.now)
 
 useEffect(()=>{
 composeMsg()
-console.log('coinInfoArr')
 },[coinInfoArr])
 
 useEffect(()=>{
 Voicecoin(finalInfoComp,setCmvAction=setCmvAction,setCmvErrorsx=setCmvErrorsx,currentIndex.current,playIcon,stopIcon,null)
 setPlayCoinInfo('')
-console.log('finalInfoComp')
+
 },[finalInfoComp,currentTime])
 
 
@@ -134,7 +133,6 @@ setCmvErrorsx('')
 
 }
 
-//console.log(currentTime)
 const stopVoice = (num,coinId)=>{
 stopIcon.current[num].style.display = 'none'	
 playIcon.current[num].style.display = 'block'	

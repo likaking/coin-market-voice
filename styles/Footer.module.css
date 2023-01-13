@@ -5,10 +5,7 @@
   padding-top: 5vw;
   margin-top: 0vw;
   background-color: rgb(86, 231, 241);
-  background-image: -webkit-radial-gradient(
-    rgb(86, 231, 241),
-    rgba(63, 194, 187, 0.801)
-  );
+  background-image: -webkit-radial-gradient(rgb(86, 231, 241),rgba(63, 194, 187, 0.801));
   position: relative;
 }
 

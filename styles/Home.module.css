@@ -154,7 +154,7 @@
 }
 
 .cmv_device_inputnBtn_container {
-  margin-bottom: 0rem;
+  margin-top: 4rem;
 }
 
 .cmv_device_input {
@@ -531,14 +531,14 @@
   }
 
   .cmv_device_input {
-    width: 70%;
+    width: 77%;
     height: 3.5rem;
     font-size: 1.5rem;
     float: left;
   }
 
   .cmv_device_grabBtn {
-    width: 30%;
+    width: 23%;
     height: 3.5rem;
     float: right;
     padding: 0;
@@ -665,14 +665,14 @@
   }
 
   .cmv_device_input {
-    width: 70%;
+    width: 77%;
     height: 3.2rem;
     font-size: 1.3rem;
     float: left;
   }
 
   .cmv_device_grabBtn {
-    width: 30%;
+    width: 23%;
     height: 3.2rem;
     float: right;
     padding: 0;
