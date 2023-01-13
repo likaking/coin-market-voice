@@ -27,6 +27,13 @@
 	.nav_bar_dropDown_ourProducts_imgMain{
 	height:60%;
 	width:auto;
+	-webkit-perspective: 1000;
+    -webkit-transform: translate3d(0,0,0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000;
+    transform: translate3d(0,0,0);
+    transform: translateZ(0);
 	}
 	.nav_bar_dropDown_ourProducts_name{
 	width:100%;

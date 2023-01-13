@@ -131,8 +131,8 @@
     padding: 0rem;
   }
   .CMVCurrencies_currencylist {
-    padding: 0.2em;
-    border: 1px solid rgb(73, 73, 73);
+    padding: 0.5em;
+    border: 1px solid  rgb(86, 231, 241);
     border-style: dashed;
   }
 }
@@ -184,10 +184,10 @@
   }
   .CMVCurrencies_currencyInfo {
     position: absolute;
-    width: 50%;
+    width: 60%;
     padding: 0rem;
   }
   .CMVCurrencies_currencylist {
-    padding: 0.2em;
+    padding: 0.7em;
   }
 }
