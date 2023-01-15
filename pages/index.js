@@ -175,17 +175,17 @@ detectSpeech()
   <div className={styles.cmvBody}>
   <div className={styles.banner}>
   <div className={styles.banner_div_L}>
-  <h1 className={styles.banner_div_L_hdr_mobile}>Monitor Crypto Prices</h1>
-  <h1 className={styles.banner_div_L_hdr2_mobile}>Via Audio</h1>
-  <h4 className={styles.banner_div_L_subhdr_mobile}>Latest crypto prices{<br className={styles.responsive_txt_brk} />} in your ears </h4>
+  <h1 className={styles.banner_div_L_hdr_mobile}>Monitor Crypto Prices {<br />} With your</h1>
+  <h1 className={styles.banner_div_L_hdr2_mobile}> Ear bud </h1>
+  <h4 className={styles.banner_div_L_subhdr_mobile}>{'Latest crypto prices in your ears'} </h4>
   <p className={styles.banner_div_L_P_mobile}>Keeping Up With the {<br className={styles.responsive920_txt_brk}/>} latest Crypto Prices Should {<br />} Not  Disrupt Our Lives</p>
   </div>
   <div className={styles.banner_div_R}></div>
   <div className={styles.banner_div_REnd}>
-  <h1 className={styles.banner_div_L_hdr}>Monitor Crypto Prices</h1>
-  <h1 className={styles.banner_div_L_hdr2}>Via Audio</h1>
+  <h1 className={styles.banner_div_L_hdr}>Monitor Crypto Prices  With your</h1>
+  <h1 className={styles.banner_div_L_hdr2}>Ear bud</h1>
   <h4 className={styles.banner_div_L_subhdr}>Latest crypto prices{<br className={styles.responsive_txt_brk} />} in your ears </h4>
-  <p className={styles.banner_div_L_P}>Keeping Up With the {<br className={styles.responsive920_txt_brk}/>} latest Crypto Prices Should {<br />} Not  Disrupt Our Lives</p>
+  <p className={styles.banner_div_L_P}>Keeping Up With the {<br className={styles.responsive920_txt_brk}/>} Latest Crypto Prices via audio</p>
   </div>
   </div>
 

@@ -83,13 +83,13 @@
   color: rgb(239, 254, 255);
   line-height: 80%;
   margin-top: 10%;
-  font-size: 2vw;
+  font-size: 1.8vw;
   text-shadow: 1px 1px rgba(73, 112, 128, 0.137);
 }
 
 .banner_div_L_hdr2 {
   color: rgb(239, 254, 255);
-  font-size: 5vw;
+  font-size: 6vw;
   line-height: 100%;
   padding: 0;
   margin: 0;
@@ -337,12 +337,12 @@
 
   .banner_div_L_hdr {
     line-height: 80%;
-    font-size: 3vw;
+    font-size: 2vw;
     margin-top: 10%;
   }
 
   .banner_div_L_hdr2 {
-    font-size: 6vw;
+    font-size: 8vw;
     line-height: 100%;
     padding: 0;
     margin: 0;
@@ -453,12 +453,12 @@
 
   .banner_div_L_hdr {
     line-height: 80%;
-    font-size: 3vw;
+    font-size: 2vw;
     margin-top: 10%;
   }
 
   .banner_div_L_hdr2 {
-    font-size: 6vw;
+    font-size: 8vw;
     line-height: 100%;
     padding: 0;
     margin: 0;
@@ -564,7 +564,7 @@
 
   .cmv_device_addCoinResult {
     font-size: 4vw;
-    width: 70%;
+    width: 77%;
   }
 
   .responsive_txt_brk {
@@ -578,7 +578,7 @@
  
 .banner_div_L_hdr_mobile {
   color: rgb(86, 231, 241);
-  line-height: 80%;
+  line-height: 120%;
   margin-top: 10%;
   font-size: 6vw;
   text-shadow: 1px 1px rgba(73, 112, 128, 0.137);
@@ -588,7 +588,7 @@
 
 .banner_div_L_hdr2_mobile {
   color: rgb(86, 231, 241);
-  font-size: 9vw;
+  font-size: 11vw;
   line-height: 100%;
   padding: 0;
   margin: 0;
@@ -601,7 +601,7 @@
   color: rgb(86, 231, 241);
   padding-left:2vw;
   text-shadow: 1px 1px rgba(149, 154, 156, 0.137);
-  display: block;
+  display: none;
 }
 
 .banner_div_L_P_mobile {
